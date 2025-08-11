@@ -1,13 +1,14 @@
-function App() {  
-  return ( 
-    <div className="App">
-      <h1>Welcome to My App</h1>
-      <p>This is a simple React application.</p>
-            <p>This is a simple React application.</p>
-      <p>This is a simple React application.</p>
-
-
-    </div>
-  );
+import NavBarHead from "./Com/NavBarHead";
+import "./App.css";
+import NavBar from "./Page/NavBar";
+function App (){
+   return(
+    <> 
+    <NavBarHead /> 
+    <NavBar />
+    </>
+   );
 }
+
+
 export default App; 

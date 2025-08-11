@@ -1,0 +1,80 @@
+@import "./Them.css";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz@10..72&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bungee+Tint&family=Dancing+Script:wght@400..700&family=Monoton&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+IN:wght@100..400&family=Playwrite+MX&family=Playwrite+VN:wght@100..400&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Dirt&family=Rye&family=Sixtyfour&family=Wallpoet&display=swap');
+.navHeader { 
+   max-width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background-color: var(--Parent-Color);
+}
+.favuret_Cart_User {
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.LogoClassName { 
+font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--Primary-Color);
+
+}
+#icones { 
+    font-size: 25px;
+    transition: .5s ease all;
+}
+#icones:hover  { 
+    cursor:  pointer;
+    color: var(--Primary-Color);
+     
+ }
+.dark { 
+    position: relative;
+    bottom: 22px;
+}
+.SearchCon { 
+    position: relative;
+    right: 60px;
+}
+.cartSpan {
+    position: relative;
+    bottom: 17px;
+    right: 5px;
+    font-size: 10px;
+    background-color: var(--Primary-Color);
+   border-radius: 50%; 
+    color: var(--White-Color);
+    padding: 2px 5px;
+   
+
+    
+}
+
+
+.nav-item .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: var(--White_Color);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+  margin: 0;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
