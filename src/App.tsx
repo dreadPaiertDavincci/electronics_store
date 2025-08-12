@@ -9,7 +9,7 @@ import Blog from "./Page/Blog";
 import FAQ from "./Page/FAQ";
 import Licenses from "./Page/Licenses";
 import Privacy_Policy from "./Page/Privacy_Policy";
-import P404 from "./Page/p404";
+import P404 from "./Page/P404";
 function App (){
    return(
     <BrowserRouter>

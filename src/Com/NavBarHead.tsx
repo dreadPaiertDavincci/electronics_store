@@ -1,12 +1,11 @@
 import "../Style/NavBar.css";
 import DarkMod from "./DarkMod";
 import SearchField from "./SearchField";
-
 function NavBarHead() {
   return (
     <div className="navHeader">
       <div className="LogoHeader">
-        <h1 className="LogoClassName">ELECTRONICS</h1>
+       <img id = "LogoImage" src="../../public/Logo/نص_فقرتك-removebg-preview.png" alt="" />
       </div>
       <div className="SearchCon">
         <SearchField />

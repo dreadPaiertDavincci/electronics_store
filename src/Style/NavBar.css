@@ -6,10 +6,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 70px;
     background-color: var(--Parent-Color);
 }
 .favuret_Cart_User {
+  position: relative;
+    right: 80px ;
     display: flex;
     width: 150px;
     justify-content: space-around;
@@ -17,10 +18,10 @@
 
 }
 .LogoClassName { 
-font-family: "Poetsen One", sans-serif;
+ font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--Primary-Color);
+  color: var(--White-Color);
 
 }
 #icones { 
@@ -96,7 +97,7 @@ font-family: "Poetsen One", sans-serif;
 
 .ulIcone {
   position: relative;
-  right: 20px;
+  right: 40px;
   display: flex;
   justify-content: space-between ;
   align-items: center;
@@ -106,7 +107,10 @@ font-family: "Poetsen One", sans-serif;
   width: 450px;
 }
 
-
+#LogoImage {
+  width: 280px;
+  height: 280px;
+}
 .nav-link {
   text-decoration: none;
   color: var(--White-Color);
@@ -164,7 +168,7 @@ font-family: "Poetsen One", sans-serif;
 .titemsLogo { 
   letter-spacing: 1px;
   position: relative;
-  left: 130px;
+  left: 60px;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-size: 18px;

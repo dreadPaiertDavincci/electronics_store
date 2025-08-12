@@ -53,7 +53,7 @@ function NavBar() {
         <div className="NavSection">
             <nav className="NavItemContinar">
                 <div className="titemsLogo">
-                    <h3 className="navItemLogo">Logo</h3>
+                     <h1 className="LogoClassName">ELECTRONICS</h1>
                 </div>
                 <ul className="ulIcone">
                     {LoopItem}
