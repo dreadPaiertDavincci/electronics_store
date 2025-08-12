@@ -309,7 +309,7 @@ header nav a {
   .item:nth-child(2)
   .checkout
   button:nth-child(2) {
-  background-color: #693eff;
+  background-color: #c8bcf1;
   color: #eee;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .title,
