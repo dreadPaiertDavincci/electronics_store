@@ -10,7 +10,6 @@ function NavBarHead() {
       <div className="SearchCon">
         <SearchField />
       </div>
-
       <div className="favuret_Cart_User">
         <div className="iconCon">
           <i id="icones" className="bxr  bx-calendar-heart"></i>

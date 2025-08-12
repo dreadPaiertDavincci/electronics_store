@@ -7,7 +7,7 @@ function Home() {
     Description: string;
     seeMoreBtn: ReactNode;
   };
-  const ImageSliderInfo: ImageSliderInfoType[] = [
+  const ImageSliderInfo:ImageSliderInfoType[] = [
     {
       Image: "../../src/HomeImage/C1.png",
       Title: "watch",
@@ -57,7 +57,6 @@ function Home() {
     const carousel = carouselRef.current;
     const listHTML = listRef.current;
     if (!carousel || !listHTML) return;
-
     const showSlider = (type: "next" | "prev") => {
       carousel.classList.remove("next", "prev");
       const items = listHTML.querySelectorAll(".item");
@@ -69,16 +68,13 @@ function Home() {
         carousel.classList.add("prev");
       }
     };
-
     const interval = setInterval(() => {
       showSlider("next");
     }, 3000);
-
     return () => {
       clearInterval(interval);
     };
   }, []);
-
   const LoopSliderHome = ImageSliderInfo.map((element, index) => {
     return (
       <div className="item" key={index}>

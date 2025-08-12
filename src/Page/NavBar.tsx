@@ -2,36 +2,32 @@ import { Link, useLocation } from "react-router-dom";
 import "../Style/NavBar.css";
 import LoginButton from "../Com/LoginButton";
 import Bell from "../Com/Bell";
-
 function NavBar() {
     type NavType = {
         name: string;
         path: string;
         subPage?: { name: string; path: string }[];
     };
-
     const location = useLocation();
-
     const item: NavType[] = [
         { name: "Home", path: "/" },
         { name: "About Us", path: "/about" },
         { name: "Shop", path: "/shop" },
         { name: "Blog", path: "/blog" },
         {
-            name: "Pages", path: "#", subPage: [
-                { name: "FAQ", path: "/faq" },
-                { name: "Licenses", path: "/licenses" },
-                { name: "Privacy Policy", path: "/privacypolicy" },
-                { name: "404", path: "/p404" },
-            ]
+          name: "Pages", path: "#", subPage: [
+            { name: "FAQ", path: "/faq" },
+            { name: "Licenses", path: "/licenses" },
+            { name: "Privacy Policy", path: "/privacypolicy" },
+            { name: "404", path: "/p404" },
+         ]
         }
     ];
-
     const LoopItem = item.map((element, index) => {
         const isActive = location.pathname === element.path;
         return (
             <li key={index} className={`nav-item ${element.subPage ? "has-dropdown" : ""}`}>
-                <Link   to={element.path} className={`nav-link ${isActive ? "active" : ""}`}>
+                <Link to={element.path} className={`nav-link ${isActive ? "active" : ""}`}>
                     {element.name}
                     {element.subPage && <span className="dropdown-arrow">▼</span>}
                 </Link>
@@ -66,5 +62,4 @@ function NavBar() {
         </div>
     );
 }
-
 export default NavBar;
