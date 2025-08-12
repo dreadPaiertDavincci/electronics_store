@@ -1,12 +1,32 @@
-import NavBarHead from "./Com/NavBarHead";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import NavBarHead from "./Com/NavBarHead";
 import NavBar from "./Page/NavBar";
+import Home from "./Page/Home";
+import About from "./Page/About";
+import Shop from "./Page/Shop";
+import Blog from "./Page/Blog";
+import FAQ from "./Page/FAQ";
+import Licenses from "./Page/Licenses";
+import Privacy_Policy from "./Page/Privacy_Policy";
+import P404 from "./Page/p404";
 function App (){
    return(
-    <> 
-    <NavBarHead /> 
-    <NavBar />
-    </>
+    <BrowserRouter>
+      <NavBarHead />
+      <NavBar />
+      <Routes>
+       <Route path = "/" element={<Home />} />
+       <Route path = "/about" element={<About />} />
+       <Route path = "/shop" element={<Shop />} />
+       <Route path = "/blog" element = {<Blog />}  />
+       <Route path = "/faq" element={<FAQ />} />
+       <Route path = "/licenses" element = {<Licenses />}/>
+       <Route path = "/privacy#policy" element = {<Privacy_Policy />} />
+       <Route path =  "/p404" element = {<P404 />} />
+      </Routes>
+    </BrowserRouter>
+      
    );
 }
 

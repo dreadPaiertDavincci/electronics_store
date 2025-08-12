@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "../Style/NavBar.css";
+import LoginButton from "../Com/LoginButton";
 
 function NavBar() {
     type NavType = {
@@ -47,7 +48,6 @@ function NavBar() {
             </li>
         );
     });
-
     return (
         <div className="NavSection">
             <nav className="NavItemContinar">
@@ -58,7 +58,7 @@ function NavBar() {
                     {LoopItem}
                 </ul>
                 <div className="LogInButon">
-                    {/* زر تسجيل الدخول */}
+                    <LoginButton />
                 </div>
             </nav>
         </div>

@@ -48,13 +48,8 @@ font-family: "Poetsen One", sans-serif;
     background-color: var(--Primary-Color);
    border-radius: 50%; 
     color: var(--White-Color);
-    padding: 2px 5px;
-   
-
-    
+    padding: 2px 5px;    
 }
-
-
 .nav-item .dropdown {
   list-style: none;
   position: absolute;
