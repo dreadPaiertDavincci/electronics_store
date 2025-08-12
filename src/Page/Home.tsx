@@ -51,10 +51,8 @@ function Home() {
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
   ];
-
   const carouselRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const carousel = carouselRef.current;
     const listHTML = listRef.current;
@@ -72,23 +70,11 @@ function Home() {
       }
     };
 
-    const seeMoreButtons = listHTML.querySelectorAll(".seeMore");
-    const onSeeMoreClick = () => {
-      carousel.classList.remove("next", "prev");
-      carousel.classList.add("showDetail");
-    };
-    seeMoreButtons.forEach((btn) =>
-      btn.addEventListener("click", onSeeMoreClick)
-    );
-
     const interval = setInterval(() => {
       showSlider("next");
     }, 3000);
 
     return () => {
-      seeMoreButtons.forEach((btn) =>
-        btn.removeEventListener("click", onSeeMoreClick)
-      );
       clearInterval(interval);
     };
   }, []);
@@ -105,7 +91,6 @@ function Home() {
       </div>
     );
   });
-
   return (
     <section className="HomeSection">
       <div className="carousel" ref={carouselRef}>
@@ -116,5 +101,4 @@ function Home() {
     </section>
   );
 }
-
 export default Home;
