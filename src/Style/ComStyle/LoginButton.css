@@ -1,67 +1,90 @@
 @import "../Them.css"; 
-.Btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
+
+.LOGINBTN {
+  font-weight: bold;
+  color: var( --Primary-Color);
+  border-radius: 2rem;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition-duration: .3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: rgb(255, 65, 65);
-}
-
-/* plus sign */
-.sign {
-  width: 100%;
-  transition-duration: .3s;
+  width: 70.02px;
+  height: 32.66px;
+  border: none;
+  background-color: var( --Parent-Color);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.sign svg {
-  width: 17px;
+.LOGINBTN .span-mother {
+  display: flex;
+  overflow: hidden;
 }
 
-.sign svg path {
-  fill: white;
-}
-/* text */
-.text {
+.LOGINBTN:hover .span-mother {
   position: absolute;
-  right: 0%;
-  width: 0%;
-  opacity: 0;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  transition-duration: .3s;
-}
-/* hover effect on button width */
-.Btn:hover {
-  width: 125px;
-  border-radius: 40px;
-  transition-duration: .3s;
 }
 
-.Btn:hover .sign {
-  width: 30%;
-  transition-duration: .3s;
-  padding-left: 20px;
+.LOGINBTN:hover .span-mother span {
+  transform: translateY(1.2em);
 }
-/* hover effect button's text */
-.Btn:hover .text {
-  opacity: 1;
-  width: 70%;
-  transition-duration: .3s;
-  padding-right: 10px;
+
+.LOGINBTN .span-mother span:nth-child(1) {
+  transition: 0.2s;
 }
-/* button click effect*/
-.Btn:active {
-  transform: translate(2px ,2px);
+
+.LOGINBTN .span-mother span:nth-child(2) {
+  transition: 0.3s;
+}
+
+.LOGINBTN .span-mother span:nth-child(3) {
+  transition: 0.4s;
+}
+
+.LOGINBTN .span-mother span:nth-child(4) {
+  transition: 0.5s;
+}
+
+.LOGINBTN .span-mother span:nth-child(5) {
+  transition: 0.6s;
+}
+
+.LOGINBTN .span-mother span:nth-child(6) {
+  transition: 0.7s;
+}
+
+.LOGINBTN .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+.LOGINBTN .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+.LOGINBTN:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+.LOGINBTN .span-mother2 span {
+  transition: 0.2s;
+}
+
+.LOGINBTN .span-mother2 span:nth-child(2) {
+  transition: 0.3s;
+}
+
+.LOGINBTN .span-mother2 span:nth-child(3) {
+  transition: 0.4s;
+}
+
+.LOGINBTN .span-mother2 span:nth-child(4) {
+  transition: 0.5s;
+}
+
+.LOGINBTN .span-mother2 span:nth-child(5) {
+  transition: 0.6s;
+}
+
+.LOGINBTN .span-mother2 span:nth-child(6) {
+  transition: 0.7s;
 }

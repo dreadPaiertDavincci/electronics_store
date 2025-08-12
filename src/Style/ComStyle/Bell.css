@@ -1,0 +1,17 @@
+@import "../Them.css";
+.bell-button {
+  background: none;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bell-button:hover {
+  background: rgba(170, 170, 170, 0.29);
+  transition: 0.5s;
+}
+
+.bell-button svg {
+  color: var(--White-Color);
+}

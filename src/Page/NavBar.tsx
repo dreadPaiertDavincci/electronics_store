@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "../Style/NavBar.css";
 import LoginButton from "../Com/LoginButton";
+import Bell from "../Com/Bell";
 
 function NavBar() {
     type NavType = {
@@ -20,7 +21,7 @@ function NavBar() {
             name: "Pages", path: "#", subPage: [
                 { name: "FAQ", path: "/faq" },
                 { name: "Licenses", path: "/licenses" },
-                { name: "Privacy Policy", path: "/privacy#policy" },
+                { name: "Privacy Policy", path: "/privacypolicy" },
                 { name: "404", path: "/p404" },
             ]
         }
@@ -30,15 +31,15 @@ function NavBar() {
         const isActive = location.pathname === element.path;
         return (
             <li key={index} className={`nav-item ${element.subPage ? "has-dropdown" : ""}`}>
-                <Link to={element.path} id="linkID" className={`nav-link ${isActive ? "active" : ""}`}>
+                <Link   to={element.path} className={`nav-link ${isActive ? "active" : ""}`}>
                     {element.name}
                     {element.subPage && <span className="dropdown-arrow">▼</span>}
                 </Link>
                 {element.subPage && (
                     <ul className="dropdown-menu">
                         {element.subPage.map((subElement, subIndex) => (
-                            <li key={subIndex}>
-                                <Link to={subElement.path} className="dropdown-link">
+                            <li id="liId" key={subIndex}>
+                                <Link id="subId" to={subElement.path} className="dropdown-link">
                                     {subElement.name}
                                 </Link>
                             </li>
@@ -59,6 +60,7 @@ function NavBar() {
                 </ul>
                 <div className="LogInButon">
                     <LoginButton />
+                    <Bell />
                 </div>
             </nav>
         </div>

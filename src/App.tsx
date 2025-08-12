@@ -22,7 +22,7 @@ function App (){
        <Route path = "/blog" element = {<Blog />}  />
        <Route path = "/faq" element={<FAQ />} />
        <Route path = "/licenses" element = {<Licenses />}/>
-       <Route path = "/privacy#policy" element = {<Privacy_Policy />} />
+       <Route path = "/privacypolicy" element = {<Privacy_Policy />} />
        <Route path =  "/p404" element = {<P404 />} />
       </Routes>
     </BrowserRouter>

@@ -50,26 +50,124 @@ font-family: "Poetsen One", sans-serif;
     color: var(--White-Color);
     padding: 2px 5px;    
 }
-.nav-item .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  background-color: var(--White_Color);
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  border-radius: 8px;
-  min-width: 180px;
+
+/*///////////NAV ITEM//////////////////////*/
+.nav-item .dropdown-menu {
   opacity: 0;
+  visibility: hidden;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
-  z-index: 999;
+  position: absolute;
+  background-color: var(--Parent-Color);
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
   margin: 0;
+  min-width: 150px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.211);
+  z-index: 100;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.dropdown-arrow { 
+  position: relative;
+  left: 3px;
+  font-size: 13px;
+}
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-.nav-item:hover .dropdown {
+.dropdown-menu #liId {
+  padding: 8px 12px;
+}
+
+.dropdown-menu #liId #subId {
+  color: var(--Black-Collor);
+  text-decoration: none;
   display: block;
-  opacity: 1;
-  transform: translateY(0);
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu #liId #subId:hover,
+.dropdown-menu #liId #subId.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ulIcone {
+  position: relative;
+  right: 20px;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  list-style: none;
+  color: var(--White-Color);
+  font-weight: bolder;
+  width: 450px;
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: var(--White-Color);
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  position: relative; 
+  display: inline-block; 
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  width: 0%;
+  height: 2px;
+  background-color: var(--White-Color);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background-color: var(--Parent-Color);
+}
+
+.nav-link.active {
+  color: var(--Parent-Color);
+}
+
+.nav-link:hover::after {
+  width: 100%; 
+}
+
+.dropdown-menu #liId #subId:hover {
+  background-color: var(--Parent-Color);
+  border-radius: 20px;
+}
+.NavSection{ 
+  background-color: var(--Primary-Color);
+}
+.NavItemContinar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LogInButon {
+  display: flex;
+  width: 130px; 
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  right: 80px;
+}
+.titemsLogo { 
+  letter-spacing: 1px;
+  position: relative;
+  left: 130px;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  color: var(--White-Color);
 }
