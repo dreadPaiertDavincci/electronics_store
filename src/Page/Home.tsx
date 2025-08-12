@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import "../Style/Home.css";
 import { Link } from "react-router";
+import TABS from "../Com/TABS";
 function Home() {
   type ImageSliderInfoType = {
     Image: string;
@@ -10,9 +11,9 @@ function Home() {
   };
 
   type CategoryType = {
-    ImageCate: string,
-    CateTitle: string; 
-  }
+    ImageCate: string;
+    CateTitle: string;
+  };
 
   const CategoryCardInfo: CategoryType[] = [
     {
@@ -37,15 +38,17 @@ function Home() {
     },
   ];
 
-  const LoopCategory = CategoryCardInfo.map((element , index) => {
-     return(
-       <div className="CardCategory" key={index}>
-          <div className="ImageCategory">
-            <img src={element.ImageCate} id="ImageIDCategory" alt="Tahiyati" />
-          </div>
-          <Link to={"/Shop"} className="CateLink">{element.CateTitle}</Link>          
+  const LoopCategory = CategoryCardInfo.map((element, index) => {
+    return (
+      <div className="CardCategory" key={index}>
+        <div className="ImageCategory">
+          <img src={element.ImageCate} id="ImageIDCategory" alt="Tahiyati" />
         </div>
-     );
+        <Link to={"/Shop"} className="CateLink">
+          {element.CateTitle}
+        </Link>
+      </div>
+    );
   });
   const ImageSliderInfo: ImageSliderInfoType[] = [
     {
@@ -78,7 +81,7 @@ function Home() {
     },
     {
       Image: "../../src/HomeImage/C5.png",
-      Title: "LAPTOP",
+      Title: "Airpod",
       Description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
@@ -135,16 +138,17 @@ function Home() {
         </div>
       </div>
 
-
       <div className="CategoryCpntinar">
         <h1 className="CateTitle">Top categories</h1>
-        <div className="FlexCArdCAtegory">
-          {LoopCategory}
-         </div>
+        <div className="FlexCArdCAtegory">{LoopCategory}</div>
+      </div>
+      
+
+      <div className="TabsCardContinar">
+        <TABS />
       </div>
 
-      
-     
+ 
     </section>
   );
 }

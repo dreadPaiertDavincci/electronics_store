@@ -495,3 +495,9 @@ header nav a {
 #ImageIDCategory:hover {
   transform: scale(1.1);
 }
+.TabsCardContinar {
+  position: relative;
+  top: 80px;
+  background-color: var( --CardColor );
+  padding: 0 100px;
+}
