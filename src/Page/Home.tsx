@@ -138,10 +138,12 @@ function Home() {
 
       <div className="CategoryCpntinar">
         <h1 className="CateTitle">Top categories</h1>
-      <div className="FlexCArdCAtegory">
-        {LoopCategory}
-       </div>
+        <div className="FlexCArdCAtegory">
+          {LoopCategory}
+         </div>
       </div>
+
+      
      
     </section>
   );
