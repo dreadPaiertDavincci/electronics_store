@@ -6,7 +6,6 @@ function Privacy_Policy() {
   return (
     <>
       <section className="TermsPrivacySection">
-    
         <div className="TremsPrivacyPaper">
           <div className="TremsTitle">
             <h1 id="TremsIDTi">Terms & Conditions and Privacy Policy</h1>
@@ -237,7 +236,7 @@ function Privacy_Policy() {
         </div>
       </section>
       <div className="FooterTrim">
-       <Footer />
+        <Footer />
       </div>
     </>
   );
