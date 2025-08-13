@@ -65,3 +65,25 @@
 .list-item:hover .list-icon {
   opacity: 1;
 }
+/*//////Cards Style////////*/
+
+.ShopSction {
+  flex: 1;                  
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+ 
+}
+.product-card {
+  padding: 1rem;
+  width: 200px;
+  border-radius: 10px;
+  
+  background-color: var( --CardColor);
+}
+.product-image {
+  width: 100%;
+  height: 200px;
+}

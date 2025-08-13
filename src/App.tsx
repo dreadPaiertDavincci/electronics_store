@@ -4,7 +4,7 @@ import NavBarHead from "./Com/NavBarHead";
 import NavBar from "./Page/NavBar";
 import Home from "./Page/Home";
 import About from "./Page/About";
-import Shop from "./Page/Sidebar";
+import Shop from "./Page/Shop";
 import Blog from "./Page/Blog";
 import FAQ from "./Page/FAQ";
 import Licenses from "./Page/Licenses";

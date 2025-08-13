@@ -1,4 +1,3 @@
-import React from "react";
 import "../Style/ProductCard.css";
 
 type ProductCardProps = {
@@ -6,7 +5,6 @@ type ProductCardProps = {
   title: string;
   price: string;
 };
-
 const ProductCard = ({ image, title, price }:ProductCardProps) => {
   return (
     <div className="product-card">

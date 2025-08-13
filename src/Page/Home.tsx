@@ -2,6 +2,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import "../Style/Home.css";
 import { Link } from "react-router";
 import TABS from "../Com/TABS";
+import Footer from "./Footer";
 
 function Home() {
   type ImageSliderInfoType = {
@@ -189,6 +190,11 @@ function Home() {
       </div>
 
       <div className="PRICECON">{karDateLoop}</div>
+
+      <div className="FooterHom">
+        <Footer />
+      </div>
+      
     </section>
   );
 }

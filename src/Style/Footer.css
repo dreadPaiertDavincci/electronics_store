@@ -1,0 +1,51 @@
+@import "./Them.css"; 
+.footerSction { 
+    width: 100% ;
+    background-color: var(--CardColor);
+    height: 350px;
+
+}
+.FooterHom { 
+    position: relative;
+    top: 150px;
+}
+
+.TitleConFooter { 
+    width: 400px;
+}
+.Sci { 
+ position: relative;
+ top: 20px;
+ right: 90px;
+}
+.FooterCon { 
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ResoursesCon{
+    width: 100px;
+    height: 200px;
+    background-color: red;
+}
+.CompanyCont { 
+        width: 100px;
+    height: 200px;
+    background-color: red;
+}
+
+
+.VirticalLine {
+    position: relative;
+    top:60px ;
+    left: 50%;
+    transform: translate(-50%);
+    height: .5px;
+    background-color: var(--Primary-Color);
+    width: 95%;
+}
+.FootFooter { 
+    background-color: red;
+}
