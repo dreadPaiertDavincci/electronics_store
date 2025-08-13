@@ -33,36 +33,35 @@ function Licenses() {
 
   return (
     <>
-    <section className="SectionContinar">
-      <div className="LisContinar">
-        <div className="RectangleCon">{REC1DATALoop}</div>
-        <div className="lefLisanCon">
-          <div className="REC2">
-            <p id="LisLeft">
-              All graphical assets in this template are licensed for personal
-              and commercial use. If you'd like to use a specific asset, please
-              check the license below. All images sourced from
-              <Link to={"#"}>Unsplash, Freepik </Link>and{" "}
-              <Link to={"#"}>Pexels</Link>
-            </p>
-          </div>
-          <div className="REC2">
-            <p id="LisLeft">
-              We've used <Link to={"#"}>SVG icon </Link>for this template
-            </p>
-          </div>
-          <div className="REC2">
-             <p id="LisLeft">
-              Orting template use <Link to={"#"}>Open Sans</Link>
-            </p>
+      <section className="SectionContinar">
+        <div className="LisContinar">
+          <div className="RectangleCon">{REC1DATALoop}</div>
+          <div className="lefLisanCon">
+            <div className="REC2">
+              <p id="LisLeft">
+                All graphical assets in this template are licensed for personal
+                and commercial use. If you'd like to use a specific asset,
+                please check the license below. All images sourced from
+                <Link to={"#"}>Unsplash, Freepik </Link>and{" "}
+                <Link to={"#"}>Pexels</Link>
+              </p>
+            </div>
+            <div className="REC2">
+              <p id="LisLeft">
+                We've used <Link to={"#"}>SVG icon </Link>for this template
+              </p>
+            </div>
+            <div className="REC2">
+              <p id="LisLeft">
+                Orting template use <Link to={"#"}>Open Sans</Link>
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+      <div className="LisFooter">
+        <Footer />
       </div>
-    </section>
-         <div className="LisFooter">
-             <Footer />
-         </div>
-
     </>
   );
 }
