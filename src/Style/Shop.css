@@ -1,0 +1,25 @@
+.shop-layout {
+  display: flex;           
+  align-items: flex-start;  
+}
+
+.shop-container {
+  flex: 1;                  
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 10px;
+  background: white;
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
