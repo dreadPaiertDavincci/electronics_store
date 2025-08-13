@@ -1,5 +1,6 @@
+@import "../Style/Them.css";
 .product-card {
-  background: #f8f8f8;
+  background: var(--CardColor);
   border-radius: 16px;
   padding: 16px;
   width: 250px;

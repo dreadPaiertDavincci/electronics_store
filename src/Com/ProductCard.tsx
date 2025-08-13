@@ -7,7 +7,7 @@ type ProductCardProps = {
   price: string;
 };
 
-const ProductCard: React.FC<ProductCardProps> = ({ image, title, price }) => {
+const ProductCard = ({ image, title, price }:ProductCardProps) => {
   return (
     <div className="product-card">
       <img src={image} alt={title} className="product-image" />

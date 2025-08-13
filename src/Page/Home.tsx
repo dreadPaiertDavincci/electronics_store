@@ -2,6 +2,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import "../Style/Home.css";
 import { Link } from "react-router";
 import TABS from "../Com/TABS";
+
 function Home() {
   type ImageSliderInfoType = {
     Image: string;
@@ -14,6 +15,10 @@ function Home() {
     ImageCate: string;
     CateTitle: string;
   };
+
+  type KarType = {
+     
+  }
 
   const CategoryCardInfo: CategoryType[] = [
     {
@@ -146,6 +151,20 @@ function Home() {
 
       <div className="TabsCardContinar">
         <TABS />
+      </div>
+
+      <div className="PRICECON">
+
+        <div className="karCard">
+          <div className="karImage"> 
+            <i className='bxr  bx-truck' id="karIcoID"  ></i> 
+          </div>
+          <div className="karTextsCon">
+            <h3 id="karIdH3">Free Standard Delivery</h3>
+            <p id="karParag">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, est?</p>
+          </div>
+        </div>
+
       </div>
 
  

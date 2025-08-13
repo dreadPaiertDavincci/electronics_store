@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import { MdArrowCircleRight } from "react-icons/md";
 import "../Style/Sidebar.css";
 
-const categories = [
+const categories:string[] = [
   "CCTV",
   "Camera",
   "Earbuds",
@@ -16,7 +16,7 @@ const categories = [
   "Phone",
 ];
 
-const brands = [
+const brands:string[] = [
   "CamNX",
   "DesertX",
   "LoginX",
@@ -26,7 +26,7 @@ const brands = [
 ];
 
 export default function Sidebar() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const filteredCategories = categories.filter((cat) =>
     cat.toLowerCase().includes(searchTerm.toLowerCase())
@@ -52,8 +52,8 @@ export default function Sidebar() {
       {/* Categories */}
       <h3 className="section-title">Categories</h3>
       <ul className="list-box">
-        {filteredCategories.map((cat) => (
-          <li key={cat} className="list-item">
+        {filteredCategories.map((cat ,index) => (
+          <li key={index} className="list-item">
             <span>{cat}</span>
             <MdArrowCircleRight className="list-icon" />
           </li>
@@ -63,14 +63,13 @@ export default function Sidebar() {
       {/* Brands */}
       <h3 className="section-title">Brands</h3>
       <ul className="list-box">
-        {filteredBrands.map((brand) => (
-          <li key={brand} className="list-item">
+        {filteredBrands.map((brand , index) => (
+          <li key={index} className="list-item">
             <span>{brand}</span>
             <MdArrowCircleRight className="list-icon" />
           </li>
         ))}
       </ul>
     </aside>
-
   );
 }

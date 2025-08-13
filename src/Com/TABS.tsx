@@ -2,6 +2,7 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import ProductCard from "./ProductCard";
 import "../Style/TABS.css"; 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -40,7 +41,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%" , height: "600px" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -54,7 +55,9 @@ export default function BasicTabs() {
       </Box>
       {/*Card*/}
       <CustomTabPanel value={value} index={0}>
-        <div className="card"></div>
+        <div className="cardCon">
+          
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         Item Two

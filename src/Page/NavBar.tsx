@@ -14,6 +14,7 @@ function NavBar() {
         { name: "About Us", path: "/about" },
         { name: "Shop", path: "/shop" },
         { name: "Blog", path: "/blog" },
+        {name : "Contact Us" , path: "/contact"},
         {
           name: "Pages", path: "#", subPage: [
             { name: "FAQ", path: "/faq" },
