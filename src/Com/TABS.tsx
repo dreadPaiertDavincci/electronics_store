@@ -2,8 +2,9 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { HomeProduct } from "./ProductData";
+import "../Style/TABS.css";
 import ProductCard from "./ProductCard";
-import "../Style/TABS.css"; 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -41,22 +42,31 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" , height: "600px" }}>
+    <Box sx={{ width: "100%", height: "900px" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Game" {...a11yProps(0)} />
+          <Tab label="Airpod" {...a11yProps(1)} />
+          <Tab label="Secreen" {...a11yProps(2)} />
         </Tabs>
       </Box>
       {/*Card*/}
       <CustomTabPanel value={value} index={0}>
-        <div className="cardCon">
-          
+        <div className="VAC">
+          <div className="cardCon">
+            {HomeProduct.map((element, index) => (
+              <ProductCard
+                key={index}
+                image={element.cardImage}
+                title={element.cardH3Title}
+                price={element.Price}
+              />
+            ))}
+          </div>
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>

@@ -498,12 +498,16 @@ header nav a {
 .TabsCardContinar {
   position: relative;
   top: 80px;
-  background-color: var( --CardColor );
+  left: 50%;
+  transform: translate(-50%);
+  width: 65%;
   padding: 0 100px;
 }
 .PRICECON { 
+  overflow: hidden;
   position: relative;
-  top: 100px;
+  top: 200px;
+  left: 30px;
   width: 100%;
   height: 220px;
   display: flex;
