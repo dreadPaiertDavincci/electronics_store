@@ -1,0 +1,32 @@
+@import "../Them.css";
+.PRICECON { 
+  overflow: hidden;
+  position: relative;
+  top: 200px;
+  left: 30px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.karCard { 
+  text-align: center;
+  width: 250px;
+  height: 100%;
+}
+#karIcoID {
+  font-size: 80px;
+  background-color: var(--CardColor);
+  padding: 20px;
+  border-radius: 20px;
+  transition: .5s;
+}
+#karIcoID:hover {
+  transform: scale(1.1);
+}
+#karIdH3 { 
+  font-weight: bolder; 
+  font-size: 20px;
+}

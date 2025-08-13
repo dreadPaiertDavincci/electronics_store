@@ -8,3 +8,14 @@
     --font-Color : #e3d3d3;
     --CardColor :  #e0eeffb9;
 }
+
+
+/* Dark Theme */
+.dark-theme {
+  --Parent-Color: #121212;
+  --White-Color: #1f1f1f;
+  --Black-Collor: #ffffff;
+  --Primary-Color: #0096C7;
+  --font-Color: #f0f0f0;
+  --CardColor: #1e2a38;
+}

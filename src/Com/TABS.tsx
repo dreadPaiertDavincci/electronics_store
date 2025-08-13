@@ -70,7 +70,7 @@ export default function BasicTabs() {
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-         <div className="VAC">
+        <div className="VAC">
           <div className="cardCon">
             {HomeProduct2.map((element, index) => (
               <ProductCard
@@ -84,7 +84,7 @@ export default function BasicTabs() {
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-            <div className="VAC">
+        <div className="VAC">
           <div className="cardCon">
             {HomeProduct3.map((element, index) => (
               <ProductCard
