@@ -2,7 +2,7 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { HomeProduct } from "./ProductData";
+import { HomeProduct, HomeProduct2, HomeProduct3 } from "./ProductData";
 import "../Style/TABS.css";
 import ProductCard from "./ProductCard";
 interface TabPanelProps {
@@ -51,7 +51,7 @@ export default function BasicTabs() {
         >
           <Tab label="Game" {...a11yProps(0)} />
           <Tab label="Airpod" {...a11yProps(1)} />
-          <Tab label="Secreen" {...a11yProps(2)} />
+          <Tab label="Keyboard" {...a11yProps(2)} />
         </Tabs>
       </Box>
       {/*Card*/}
@@ -70,10 +70,32 @@ export default function BasicTabs() {
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+         <div className="VAC">
+          <div className="cardCon">
+            {HomeProduct2.map((element, index) => (
+              <ProductCard
+                key={index}
+                image={element.cardImage}
+                title={element.cardH3Title}
+                price={element.Price}
+              />
+            ))}
+          </div>
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+            <div className="VAC">
+          <div className="cardCon">
+            {HomeProduct3.map((element, index) => (
+              <ProductCard
+                key={index}
+                image={element.cardImage}
+                title={element.cardH3Title}
+                price={element.Price}
+              />
+            ))}
+          </div>
+        </div>
       </CustomTabPanel>
     </Box>
   );
