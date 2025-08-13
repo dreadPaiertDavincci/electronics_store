@@ -5,5 +5,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.P404Title {
+    position: relative;
+    bottom: 130px;
+    text-align: center;
+}
 
+#NotH1Tit{ 
+    font-size: 50px;
+}
+#ParaNot { 
+    position: relative; 
+    bottom: 30px;
 }
