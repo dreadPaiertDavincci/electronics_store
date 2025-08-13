@@ -1,0 +1,9 @@
+@import "./Them.css"; 
+
+.P404Section { 
+    background-color: var(--Parent-Color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

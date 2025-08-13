@@ -1,6 +1,13 @@
+import "../Style/404.css"; 
 function P404() {
     return(
-        <h1>Hello in 404 Page</h1>
+       <section className="P404Section"> 
+       
+       <div className="NotFoundImage"> 
+         <img src="" alt="NotFoundTitle" />
+       </div>
+           
+      </section>
     );
 }
 export default P404;

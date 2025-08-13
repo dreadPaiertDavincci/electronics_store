@@ -1,3 +1,4 @@
+import KARCARDS from "../Com/KARCARDS";
 import "../Style/About.css";
 import Footer from "./Footer";
 function About() {
@@ -36,7 +37,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="UpAbout">
+      <div id="AB2" className="UpAbout">
         <div className="AboutCo">
           <div className="IamgeAbout">
             <img
@@ -45,7 +46,7 @@ function About() {
               alt="Tahiyati"
             />
           </div>
-          <div className="AboutParagraph">
+          <div  className="AboutParagraph">
             <div className="HEDABout">
               <h2 id="ABUYT">Who We Are ?</h2>
               <p id="ParagABO">Electronics Innovators</p>
@@ -69,6 +70,9 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="AboutComponant"> 
+         <KARCARDS />
       </div>
       <div className="FooterAbout"> 
         <Footer />
