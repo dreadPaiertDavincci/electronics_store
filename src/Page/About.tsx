@@ -1,6 +1,79 @@
+import "../Style/About.css";
+import Footer from "./Footer";
 function About() {
-    return(
-        <h1>Hello in About Page</h1>
-    );
+  return (
+    <section className="AboutSection">
+      <div className="UpAbout">
+        <div className="AboutCo">
+          <div className="AboutParagraph">
+            <div className="HEDABout">
+              <h2 id="ABUYT">Our Story</h2>
+              <p id="ParagABO">Where Technology Meets Passion</p>
+            </div>
+            <div className="PragBodyabou">
+              <p id="BPA">
+                At Our Story, we believe that technology has the power to create
+                meaningful experiences. We're a passionate team of electronics
+                who are dedicated to providing high-quality products that
+                enhance your everyday life.
+              </p>
+            </div>
+            <div className="PragBodyabou">
+              <p id="BPA">
+                Our journey began with a shared vision to bridge the gap between
+                cutting-edge technology. With this vision in mind, we embarked
+                on a mission to redefine the way people interact with
+                technology.
+              </p>
+            </div>
+          </div>
+          <div className="IamgeAbout">
+            <img
+              id="AboutImage"
+              src="../../public/Logo/ABOUT.png"
+              alt="Tahiyati"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="UpAbout">
+        <div className="AboutCo">
+          <div className="IamgeAbout">
+            <img
+              id="AboutImage"
+              src="../../public/Logo/ABOUT2.png"
+              alt="Tahiyati"
+            />
+          </div>
+          <div className="AboutParagraph">
+            <div className="HEDABout">
+              <h2 id="ABUYT">Who We Are ?</h2>
+              <p id="ParagABO">Electronics Innovators</p>
+            </div>
+            <div className="PragBodyabou">
+              <p id="BPA">
+                At Our Story, we are a team of passionate innovators in the
+                world of electronics. With a shared love for technology and a
+                drive to create exceptional products, we strive to make a
+                positive impact on the way people live and interact with the
+                world around them.
+              </p>
+            </div>
+            <div className="PragBodyabou">
+              <p id="BPA">
+                Our journey began with a shared vision to bridge the gap between
+                cutting-edge technology. With this vision in mind, we embarked
+                on a mission to redefine the way people interact with
+                technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="FooterAbout"> 
+        <Footer />
+      </div>
+    </section>
+  );
 }
 export default About;
