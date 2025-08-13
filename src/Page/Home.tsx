@@ -1,5 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import "../Style/Home.css";
+import { Link } from "react-router";
+import TABS from "../Com/TABS";
 function Home() {
   type ImageSliderInfoType = {
     Image: string;
@@ -7,7 +9,48 @@ function Home() {
     Description: string;
     seeMoreBtn: ReactNode;
   };
-  const ImageSliderInfo:ImageSliderInfoType[] = [
+
+  type CategoryType = {
+    ImageCate: string;
+    CateTitle: string;
+  };
+
+  const CategoryCardInfo: CategoryType[] = [
+    {
+      ImageCate: "../../src/CategoryImage/CA1.png",
+      CateTitle: "Game",
+    },
+    {
+      ImageCate: "../../src/CategoryImage/CA2.png",
+      CateTitle: "Screen",
+    },
+    {
+      ImageCate: "../../src/CategoryImage/CA3.png",
+      CateTitle: "Phone",
+    },
+    {
+      ImageCate: "../../src/CategoryImage/CA4.png",
+      CateTitle: "Airpod",
+    },
+    {
+      ImageCate: "../../src/CategoryImage/CA5.png",
+      CateTitle: "Watch",
+    },
+  ];
+
+  const LoopCategory = CategoryCardInfo.map((element, index) => {
+    return (
+      <div className="CardCategory" key={index}>
+        <div className="ImageCategory">
+          <img src={element.ImageCate} id="ImageIDCategory" alt="Tahiyati" />
+        </div>
+        <Link to={"/Shop"} className="CateLink">
+          {element.CateTitle}
+        </Link>
+      </div>
+    );
+  });
+  const ImageSliderInfo: ImageSliderInfoType[] = [
     {
       Image: "../../src/HomeImage/C1.png",
       Title: "watch",
@@ -38,7 +81,7 @@ function Home() {
     },
     {
       Image: "../../src/HomeImage/C5.png",
-      Title: "LAPTOP",
+      Title: "Airpod",
       Description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
@@ -94,6 +137,18 @@ function Home() {
           {LoopSliderHome}
         </div>
       </div>
+
+      <div className="CategoryCpntinar">
+        <h1 className="CateTitle">Top categories</h1>
+        <div className="FlexCArdCAtegory">{LoopCategory}</div>
+      </div>
+      
+
+      <div className="TabsCardContinar">
+        <TABS />
+      </div>
+
+ 
     </section>
   );
 }
