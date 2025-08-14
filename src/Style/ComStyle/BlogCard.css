@@ -1,0 +1,29 @@
+@import "../Them.css";
+.BC {
+  height: 300px;
+  width: 250px;
+  padding: 20px;
+}
+.BCImage {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+#ImageBlogId {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+#BLDIVPARA {
+  color: var(--font-Color);
+}
+#ImageBlogId:hover {
+  transform: scale(1.1);
+}
+#BlogLinCar {
+  color: var(--Black-Collor);
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+}

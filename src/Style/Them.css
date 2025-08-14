@@ -1,21 +1,20 @@
 :root {
-    /*0096C7*/
-    /*0077B6*/
-    --Parent-Color: #f8f9fa;
-    --White-Color: #ffffff;
-    --Black-Collor: #000000;
-    --Primary-Color: #0077B6;
-    --font-Color : #a39da6;
-    --CardColor :  #e0eeffb9;
+  /*0096C7*/
+  /*0077B6*/
+  --Parent-Color: #f8f9fa;
+  --White-Color: #ffffff;
+  --Black-Collor: #000000;
+  --Primary-Color: #0077b6;
+  --font-Color: #a39da6;
+  --CardColor: #e0eeffb9;
 }
-
 
 /* Dark Theme */
 .dark-theme {
   --Parent-Color: #121212;
   --White-Color: #1f1f1f;
   --Black-Collor: #ffffff;
-  --Primary-Color: #0096C7;
+  --Primary-Color: #0096c7;
   --font-Color: #ffe4e4;
   --CardColor: #1e2a38;
 }
