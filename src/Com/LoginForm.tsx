@@ -1,12 +1,50 @@
+import React, { useRef, useState } from "react";
 import "../Style/ComStyle/FormLogSig.css";
 
 type LoginFormProps = {
   onOpenSignUp: () => void;
 };
 
+interface UserDateInterFaceType {
+  Email: string;
+  Password: string;
+  RememberCheck: boolean;
+}
+
 export default function LoginForm({ onOpenSignUp }: LoginFormProps) {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+
+  const [userDate, setUserDate] = useState<UserDateInterFaceType>({
+    Email: "",
+    Password: "",
+    RememberCheck: false,
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setUserDate({
+      ...userDate,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const Email = userDate.Email;
+    const Password = userDate.Password;
+    const Remember = userDate.RememberCheck;
+    if (!Email.trim() || !Password.trim()) {
+      alert("Error!!");
+      return;
+    }
+    if (emailRef.current) emailRef.current.value = "";
+    if (passwordRef.current) passwordRef.current.value = "";
+    setUserDate({ Email: "", Password: "", RememberCheck: false });
+  };
+
   return (
-    <form className="login-form">
+    <form className="login-form" onSubmit={handleSubmit}>
       <div className="field-column">
         <label className="label-email">Email</label>
       </div>
@@ -25,9 +63,11 @@ export default function LoginForm({ onOpenSignUp }: LoginFormProps) {
           type="text"
           className="input-email"
           placeholder="Enter your Email"
+          name="Email"
+          value={userDate.Email}
+          onChange={handleChange}
         />
       </div>
-
       <div className="field-column">
         <label className="label-password">Password</label>
       </div>
@@ -38,22 +78,27 @@ export default function LoginForm({ onOpenSignUp }: LoginFormProps) {
           width="20"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
-          <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
         </svg>
         <input
           type="password"
           className="input-password"
           placeholder="Enter your Password"
+          name="Password"
+          value={userDate.Password}
+          onChange={handleChange}
         />
       </div>
-
       <div className="flex-row">
-        <div>
-          <input type="checkbox" className="REmem" />
-          <label>Remember me</label>
+        <input
+          type="checkbox"
+          className="REmem"
+          name="RememberCheck"
+          checked={userDate.RememberCheck}
+          onChange={handleChange}
+        />
+        <div className="flex-row">
+          <span className="link-text">Forgot password?</span>
         </div>
-        <span className="link-text">Forgot password?</span>
       </div>
 
       <button type="submit" className="btn-submit">

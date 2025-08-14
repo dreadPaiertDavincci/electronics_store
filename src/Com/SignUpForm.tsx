@@ -1,10 +1,40 @@
+import { useRef, useState } from "react";
 import "../Style/ComStyle/FormLogSig.css";
 
 type SignUpFormProps = {
   onGoToLogin: () => void;
 };
 
+interface signUpDataType {
+  userName: string;
+  Email: string;
+  password: string;
+}
+
 export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
+  const [sigData, setSigData] = useState<signUpDataType[]>([
+    {
+      userName: "",
+      Email: "",
+      password: "",
+    },
+  ]);
+
+  const userName = useRef<HTMLInputElement>(null);
+  const Email = useRef<HTMLInputElement>(null);
+  const password = useRef<HTMLInputElement>(null);
+
+  const handleChang = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setSigData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const handleSubmit  = ((e:React.FormEvent)=> { 
+     e.preventDefault();
+     const {userName}
+  });
   return (
     <form className="login-form">
       <div className="field-column">
