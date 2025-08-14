@@ -6,8 +6,6 @@
   padding: 15px;
   box-sizing: border-box;
 }
-
-
 .search-box {
   display: flex;
   align-items: center;
@@ -16,8 +14,7 @@
   padding: 5px 10px;
   margin-bottom: 20px;
 }
-
-.search-box input {
+.search-box .inputCA {
   border: none;
   background: transparent;
   flex: 1;

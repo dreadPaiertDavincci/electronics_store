@@ -43,6 +43,7 @@ function Shop() {
         {/* Search Box */}
         <div className="search-box">
           <input
+          className="inputCA"
             type="text"
             placeholder="Search..."
             value={searchTerm}

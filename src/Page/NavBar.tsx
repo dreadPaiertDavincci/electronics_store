@@ -2,12 +2,15 @@ import { Link, useLocation } from "react-router-dom";
 import "../Style/NavBar.css";
 import LoginButton from "../Com/LoginButton";
 import Bell from "../Com/Bell";
+import { useState } from "react";
+import LoginWithModal from "../Com/LoginWithModal";
 function NavBar() {
     type NavType = {
         name: string;
         path: string;
         subPage?: { name: string; path: string }[];
     };
+    const [showModal, setShowModal] = useState(false);
     const location = useLocation();
     const item: NavType[] = [
         { name: "Home", path: "/" },
@@ -56,10 +59,11 @@ function NavBar() {
                     {LoopItem}
                 </ul>
                 <div className="LogInButon">
-                    <LoginButton />
+                    <LoginButton  onClick={() => setShowModal(true)} />
                     <Bell />
                 </div>
             </nav>
+             {showModal && <LoginWithModal onClose={() => setShowModal(false)} />}
         </div>
     );
 }

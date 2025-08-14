@@ -26,14 +26,14 @@
 }
 
 .inputFi:focus,
-input:hover {
+.inputFi:hover {
   outline: none;
   border-color: var(--Primary-Color);
   background-color: #fff;
   box-shadow: 0 0 0 4px rgb(247 127 0 / 10%);
 }
 
-.icon {
+.icons {
   position: absolute;
   left: 1rem;
   fill: #9e9ea7;

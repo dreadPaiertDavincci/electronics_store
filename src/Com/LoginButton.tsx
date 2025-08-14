@@ -1,7 +1,11 @@
 import "../Style/ComStyle/LoginButton.css";
-function LoginButton() {
+type LoginButtonProps = {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+function LoginButton({ onClick }: LoginButtonProps) {
   return (
-    <button className="LOGINBTN">
+    <button className="LOGINBTN" onClick={onClick}>
       <span className="span-mother">
         <span>L</span>
         <span>O</span>
