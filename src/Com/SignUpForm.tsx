@@ -10,19 +10,16 @@ interface signUpDataType {
   Email: string;
   password: string;
 }
-
 export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
-  const [sigData, setSigData] = useState<signUpDataType[]>([
-    {
-      userName: "",
-      Email: "",
-      password: "",
-    },
-  ]);
+  const [sigData, setSigData] = useState<signUpDataType>({
+    userName: "",
+    Email: "",
+    password: "",
+  });
 
-  const userName = useRef<HTMLInputElement>(null);
-  const Email = useRef<HTMLInputElement>(null);
-  const password = useRef<HTMLInputElement>(null);
+  const userNameRef = useRef<HTMLInputElement>(null);
+  const EmailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   const handleChang = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -31,12 +28,31 @@ export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
       [name]: value,
     }));
   };
-  const handleSubmit  = ((e:React.FormEvent)=> { 
-     e.preventDefault();
-     const {userName}
-  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const userName = sigData.userName;
+    const Email = sigData.Email;
+    const password = sigData.password;
+
+    if (!userName.trim() || !Email.trim() || !password.trim()) {
+      alert("Error!");
+      return;
+    }
+
+    if (userNameRef.current) userNameRef.current.value = "";
+    if (EmailRef.current) EmailRef.current.value = "";
+    if (passwordRef.current) passwordRef.current.value = "";
+
+    setSigData({
+      userName: "",
+      Email: "",
+      password: "",
+    });
+  };
+
   return (
-    <form className="login-form">
+    <form className="login-form"  onSubmit={handleSubmit}>
       <div className="field-column">
         <label className="label-email">Name </label>
       </div>
@@ -55,9 +71,13 @@ export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
           type="text"
           className="input-email"
           placeholder="Enter your Name"
+          name="userName"
+          value={sigData.userName}
+          onChange={handleChang}
+          ref={userNameRef}
         />
       </div>
-      <div className="flex-column">
+      <div className="field-column">
         <label className="label-email">Email </label>
       </div>
       <div className="field-input">
@@ -75,9 +95,12 @@ export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
           type="text"
           className="input-email"
           placeholder="Enter your Email"
+          name="Email"
+          value={sigData.Email}
+          onChange={handleChang}
+          ref={EmailRef}
         />
       </div>
-
       <div className="flex-column">
         <label>Password </label>
       </div>
@@ -88,23 +111,29 @@ export default function SignUpForm({ onGoToLogin }: SignUpFormProps) {
           width="20"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
-          <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
+          <g>
+            <path d="M256 0C114.836 0 0 114.836 0 256s114.836 256 256 256 256-114.836 256-256S397.164 0 256 0zm0 472c-119.103 0-216-96.897-216-216S136.897 40 256 40s216 96.897 216 216-96.897 216-216 216zm0-392c-97.047 0-176 78.953-176 176s78.953 176 176 176 176-78.953 176-176-78.953-176-176-176zm0 320c-79.529 0-144-64.471-144-144s64.471-144 144-144 144 64.471 144 144-64.471 144-144 144z"/>
+          </g>
         </svg>
         <input
           type="password"
           className="input-email"
           placeholder="Enter your Password"
+          name="password"
+          value={sigData.password}
+          onChange={handleChang}
+          ref={passwordRef}
         />
       </div>
-      <button className="btn-submit">Sign Up</button>
+      <button className="btn-submit" type="submit">
+        Sign Up
+      </button>
       <p className="text-center">
         Already have an account?{" "}
         <span className="link-text" onClick={onGoToLogin}>
           login
         </span>
       </p>
-
       <div className="flex-row">
         <button type="button" className="btn-google">
           <svg
