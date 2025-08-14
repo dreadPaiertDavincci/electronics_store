@@ -1,0 +1,151 @@
+@import "./Them.css";
+.FAQContinar {
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  height: 620px;
+  width: 100%;
+  position: relative;
+  left: 25px;
+
+}
+
+.IamgeContinar {
+  width: 400px;
+  height: 100%;
+  border-radius: 15px; 
+}
+#FAImaeg { 
+      border-radius: 15px; 
+
+    width: 100%;  
+    height: 100%; 
+} 
+.TitleCounterContinar {
+    position: relative;
+    left: 20px;
+  width: 800px;
+  height: 100%;
+}
+
+#P1 { 
+    position: relative;
+    top: 10px; 
+
+    color: var(--Primary-Color);
+    font-weight: bolder; 
+    font-size: 20px;
+}
+#P2 { 
+    position: relative;
+     bottom: 10px; 
+    font-size: 35px; 
+    color: var(--Black-Collor);  
+}
+#P3 { 
+    position: relative;
+    bottom: 25px; 
+    color: var(--font-Color);
+    width: 600px;
+}
+.CounterContinar {
+    position: relative;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+    width: 100% ;
+    height: 450px;
+}
+.BOXCount  {
+    width: 350px;
+    height: 200px;
+}
+
+#FAPrice { 
+    position: relative;
+    bottom: 40px;
+    font-size: 60px;
+    color: var(--Black-Collor);
+}
+#FAPrice::after {
+    content: "%";
+    color: var(--Primary-Color);
+}
+#FAPrice2 { 
+      position: relative;
+    bottom: 40px;
+    font-size: 60px;
+    color: var(--Black-Collor);
+}
+#FAPrice2::after { 
+     content: "M";
+    color: var(--Primary-Color);
+}
+#FAPrice3 {
+    position: relative;
+    bottom: 40px;
+    font-size: 60px;
+    color: var(--Black-Collor);
+}
+#FAPrice3::after { 
+    content: "M";
+    color: var(--Primary-Color);
+}
+#FAPrice3::before { 
+    content: "$";
+    color: red
+}
+
+#PAPRPA {
+    position: relative;
+  bottom: 80px;
+     color: var(--Black-Collor);
+     font-weight: bolder; 
+     font-size: 18px;
+}
+#FAQPRA {
+    width: 300px; 
+    font-weight: bolder; 
+    position: relative;
+    bottom: 80px;
+    color: var(--font-Color);
+}
+
+
+
+.QuistionContinar {
+    position: relative;
+    top: 80px;
+    height: 700px; 
+    width: 100%; 
+}
+.HeaderQuistionContinar { 
+    text-align: center;
+}
+#Q1 { 
+    font-size: 40px;
+    color: var(--Black-Collor); 
+}
+#Q2 { 
+    position: relative;
+    bottom: 40px;
+    text-align: center;
+    width: 800px;
+    display: inline-block;
+    color: var(--font-Color);
+}
+.QusTabsCon { 
+    position: relative; 
+    left: 50%; 
+    transform: translate(-50%);
+    width: 80%;
+    margin-bottom: 100px;
+}
+
