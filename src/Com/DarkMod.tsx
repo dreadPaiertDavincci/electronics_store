@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import "../Style/ComStyle/Dark.css";
-
 function DarkMod() {
   const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
     if (isDark) {
       document.body.classList.add("dark-theme");
