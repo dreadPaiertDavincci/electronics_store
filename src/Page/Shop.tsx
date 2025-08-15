@@ -6,6 +6,7 @@ import "../Style/Sidebar.css";
 import ProductCard from "../Com/ProductCard";
 function Shop() {
 
+
   const categories: string[] = [
     "CCTV",
     "Camera",
@@ -74,6 +75,7 @@ function Shop() {
           ))}
         </ul>
       </aside>
+
         <div className="shop-container">
         {ProductData.map((p, index) => (
           <ProductCard

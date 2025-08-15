@@ -2,7 +2,6 @@ type FAQDataType = {
    FAQTit:string, 
    FAQtext:string
 }
-
 export const FAQData1:FAQDataType[] = [
    {
     FAQTit: "What payment methods do you accept?",
@@ -21,6 +20,7 @@ export const FAQData1:FAQDataType[] = [
     FAQtext: "Once your order has shipped, you'll receive a confirmation email with tracking information. You can use this tracking number to monitor the status of your delivery and estimate its arrival time."
    },
 ];
+
 export const FAQData2:FAQDataType[] = [
    {
     FAQTit: "Are your products covered by a warranty?",

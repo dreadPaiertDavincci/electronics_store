@@ -45,7 +45,6 @@ export default function FAQTAB() {
             </div>
           </div>
         </TabPanel>
-
         <TabPanel value="2">
           <div className="TACOCO">
             <div className="TACO">

@@ -4,6 +4,8 @@ type ProductDataType = {
   Price: string;
   category: string;
 };
+
+
 export const ProductData: ProductDataType[] = [
   {
     cardImage: "../../src/ProductImage/test.png",
@@ -11,7 +13,28 @@ export const ProductData: ProductDataType[] = [
     Price: "$ 79.00 USD",
     category: "Game",
   },
+    {
+    cardImage: "../../src/ProductImage/test.png",
+    cardH3Title: "Blue Ear Muffs",
+    Price: "$ 79.00 USD",
+    category: "Game",
+  },
+  
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const HomeProduct: ProductDataType[] = [
   // Game Card
