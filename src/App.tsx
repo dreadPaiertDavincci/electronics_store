@@ -29,7 +29,7 @@ function App (){
        <Route path = "/licenses" element = {<Licenses />}/>
        <Route path = "/privacypolicy" element = {<Privacy_Policy />} />
        <Route path =  "/p404" element = {<P404 />} />
-       <Route path="/product" element={<ShowCard  />} />
+       <Route path="/product" element={<ShowCard/>} /> {/* هذا الجديد */}
       </Routes>
     </BrowserRouter>
       
