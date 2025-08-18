@@ -9,12 +9,3 @@
   --CardColor: #e0eeffb9;
 }
 
-/* Dark Theme */
-.dark-theme {
-  --Parent-Color: #121212;
-  --White-Color: #1f1f1f;
-  --Black-Collor: #ffffff;
-  --Primary-Color: #0096c7;
-  --font-Color: #ffe4e4;
-  --CardColor: #1e2a38;
-}
