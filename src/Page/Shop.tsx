@@ -73,7 +73,7 @@ function Shop() {
         </ul>
       </aside>
 
-        <div className="shop-container">
+        < div className="products-container">
         {ProductData.map((p, index) => (
           <ProductCard
             key={index}
@@ -83,6 +83,10 @@ function Shop() {
           />
         ))}
       </div>
+
+
+
+
     </section>
   );
 }
