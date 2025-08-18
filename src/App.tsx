@@ -12,7 +12,6 @@ import Privacy_Policy from "./Page/Privacy_Policy";
 import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
 import ProductCard from "./Com/ProductCard";
-import ShowCard from "./Com/ShowCard";
 
 function App (){
    return(
@@ -32,7 +31,6 @@ function App (){
        <Route path="/product" element={<ProductCard/>} /> {/* هذا الجديد */}
       </Routes>
     </BrowserRouter>
-      
       
    );
 }
