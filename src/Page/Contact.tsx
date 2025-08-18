@@ -2,7 +2,6 @@ import React from "react";
 import "../Style/Contact.css";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import Footer from "./Footer";
-
 const Contact: React.FC = () => {
   return (
     <section className="contact-section">
@@ -23,9 +22,7 @@ const Contact: React.FC = () => {
               <input type="email" placeholder="Email" />
               <input type="text" placeholder="Subject" />
             </div>
-
             <textarea placeholder="Your Message" rows={6}></textarea>
-
             <button type="submit" className="submit-btn">
               Send Message
             </button>
@@ -41,31 +38,33 @@ const Contact: React.FC = () => {
       {/* Contact Cards: Appears below Form + Image */}
       <div className="contact-cards-container">
         <div className="contact-card">
-          <div className="contact-icon"><FiPhone /></div>
+          <div className="contact-icon">
+            <FiPhone />
+          </div>
           <h3 className="contact-title">Call Us.</h3>
           <p>+00 123 456 789</p>
-       
         </div>
 
         <div className="contact-card">
-          <div className="contact-icon"><FiMail /></div>
+          <div className="contact-icon">
+            <FiMail />
+          </div>
           <h3 className="contact-title">Email</h3>
           <p>support@atonal.com</p>
-       
         </div>
 
         <div className="contact-card">
-          <div className="contact-icon"><FiMapPin /></div>
+          <div className="contact-icon">
+            <FiMapPin />
+          </div>
           <h3 className="contact-title">Location.</h3>
-          <p>Address goes</p>  
+          <p>Address goes</p>
         </div>
       </div>
 
-<div className="FooterHom">
+      <div className="FooterHom">
         <Footer />
       </div>
-
-
     </section>
   );
 };

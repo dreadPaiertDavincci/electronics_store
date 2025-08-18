@@ -14,7 +14,6 @@ function NavBarHead() {
           <i id="icones" className="bxr  bx-calendar-heart"></i>
           <span className="cartSpan">0</span>
         </div>
-
         <div className="iconCon">
           <i id="icones" className="bx  bx-shopping-bag-alt"></i>
           <span className="cartSpan">0</span>
