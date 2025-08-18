@@ -5,8 +5,6 @@ import { ProductData } from "../Com/ProductData";
 import "../Style/Sidebar.css";
 import ProductCard from "../Com/ProductCard";
 function Shop() {
-
-
   const categories: string[] = [
     "CCTV",
     "Camera",
@@ -19,7 +17,6 @@ function Shop() {
     "Mouse",
     "Phone",
   ];
-
   const brands: string[] = [
     "CamNX",
     "DesertX",
