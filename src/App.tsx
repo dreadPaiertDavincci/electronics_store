@@ -11,6 +11,8 @@ import Licenses from "./Page/Licenses";
 import Privacy_Policy from "./Page/Privacy_Policy";
 import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
+import ProductCard from "./Com/ProductCard";
+
 function App (){
    return(
     <BrowserRouter>
@@ -26,6 +28,7 @@ function App (){
        <Route path = "/licenses" element = {<Licenses />}/>
        <Route path = "/privacypolicy" element = {<Privacy_Policy />} />
        <Route path =  "/p404" element = {<P404 />} />
+       <Route path="/product" element={<ProductCard/>} /> {/* هذا الجديد */}
       </Routes>
     </BrowserRouter>
       

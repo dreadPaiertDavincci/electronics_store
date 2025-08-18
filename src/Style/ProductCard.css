@@ -1,12 +1,22 @@
-@import "../Style/Them.css";
 .product-card {
   background: var(--CardColor);
   border-radius: 16px;
-  padding: 16px;
-  width: 250px;
+  padding: 30px;
+  width: 800px;
+  height: 270px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  
+}
 
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 800px));
+  gap: 5px; 
+  justify-content: center; 
+  justify-items: center;   
+  margin: 30px auto;      
+  max-width: 1200px;      
+  width: 100%;
 }
 
 .product-image {
@@ -16,19 +26,44 @@
   transition: .5s;
   cursor: pointer;
 }
+
 .product-image:hover { 
-   transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.product-info {
+  margin-top: 12px;
+  display: flex;             
+  justify-content: space-between; 
+  align-items: center;        
+}
+
+.product-texts {
+  display: flex;
+  flex-direction: column;     
+  text-align: left;
 }
 
 .product-title {
-  font-size: 1rem;
   color: #555;
-  margin: 12px 0 4px;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .product-price {
-  font-size: 1rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin: 4px 0 0;
+}
+
+.arrow-icon {
+  font-size: 1rem;
+  color: #555;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.arrow-icon:hover {
+  transform: translateX(3px);
 }
