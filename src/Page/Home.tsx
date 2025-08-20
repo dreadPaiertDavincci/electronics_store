@@ -145,7 +145,7 @@ function Home() {
         <h1 className="CateTitle">Top categories</h1>
         <div className="FlexCArdCAtegory">{LoopCategory}</div>
       </div>
-  
+
       <div className="TabsCardContinar">
         <TABS />
       </div>
@@ -155,7 +155,6 @@ function Home() {
       <div className="FooterHom">
         <Footer />
       </div>
-      
     </section>
   );
 }

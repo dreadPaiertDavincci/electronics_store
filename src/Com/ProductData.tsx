@@ -71,51 +71,32 @@ export const ProductData: ProductDataType[] = [
   { id: 47,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/SC1.png", cardH3Title: "Mintor", Price: "$325.00 USD", category: "Monitor" },
   { id: 48,star:"⭐⭐" , cardImage: "../../src/ProductImage/SC2.png", cardH3Title: "Mintor", Price: "$340.00 USD", category: "Monitor" },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const HomeProduct: ProductDataType[] = [
-  { id: 49,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/GA1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Games" },
-  { id: 50,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/GA2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Games" },
-  { id: 51,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/GA3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Games" },
-  { id: 52,star:"⭐⭐" , cardImage: "../../src/HomeImage/GA4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gamdfses" },
-  { id: 53,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/GA5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Games" },
-  { id: 54,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/GA6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Games" },
+  { id: 44,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/LAP2.png", cardH3Title: "Laptop", Price: "$240.00 USD", category: "Laptop" },
+  { id: 47,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/SC1.png", cardH3Title: "Mintor", Price: "$325.00 USD", category: "Monitor" },
+  { id: 40,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/X1.png", cardH3Title: "XBOX", Price: "$150.00 USD",category:"XBOX" },
+  { id: 23,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/JOS2.png", cardH3Title: "Jostik", Price: "$25.00 USD", category: "Joystick" },
+  { id:39,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/PS5.png", cardH3Title: "Ps5", Price: "$215.00 USD", category: "PS5" },
+  { id: 38,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/P3.png", cardH3Title: "Ps4", Price: "$170.00 USD", category: "PS4" },
+];
+export const HomeProduct2: ProductDataType[] = [
+  { id: 11,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/AIR2.png", cardH3Title: "Airpod", Price: "$25.00 USD", category: "Airpod" },
+  { id: 12,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/AIR3.png", cardH3Title: "Airpod", Price: "$18.00 USD", category: "Airpod" },
+  { id: 13,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/AIR4.png", cardH3Title: "Airpod", Price: "$9.00 USD", category: "Airpod" },
+  { id: 14,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/AIR5.png", cardH3Title: "Airpod", Price: "$20.00 USD", category: "Airpod" },
+  { id: 14,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/AIR7.png", cardH3Title: "Airpod", Price: "$25.00 USD", category: "Airpod" },
+  { id: 14,star:"⭐⭐" , cardImage: "../../src/ProductImage/AIR8.png", cardH3Title: "Airpod", Price: "$26.00 USD", category: "Airpod" },
 ];
 
-export const HomeProduct2: ProductDataType[] = [
-  { id: 55,star:"⭐⭐⭐⭐" , cardImage: "../../src/HomeImage/AR1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-  { id: 56,star:"⭐⭐" , cardImage: "../../src/HomeImage/AR2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-  { id: 57,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/AR3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-  { id: 58,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/AR4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-  { id: 59,star:"⭐⭐⭐⭐" , cardImage: "../../src/HomeImage/AR5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-  { id: 60,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/AR6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod4" },
-];
+
+
+
 
 export const HomeProduct3: ProductDataType[] = [
-  { id: 61,star:"⭐⭐⭐⭐" , cardImage: "../../src/HomeImage/K1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gadme" },
   { id: 62,star:"⭐⭐" , cardImage: "../../src/HomeImage/K2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gadme" },
-  { id: 63,star:"⭐⭐⭐⭐" , cardImage: "../../src/HomeImage/K3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gadme" },
-  { id: 64,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/K4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gdame" },
-  { id: 65,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/K5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gadme" },
-  { id: 66,star:"⭐⭐⭐" , cardImage: "../../src/HomeImage/K6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Gadme" },
+  { id: 27,star:"⭐⭐⭐⭐" , cardImage: "../../src/ProductImage/KE1.png", cardH3Title: "Keyboard", Price: "$15.00 USD", category: "Keyboard" },
+  { id: 28,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/KE2.png", cardH3Title: "Keyboard", Price: "$20.00 USD", category: "Keyboard" },
+  { id: 29,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/KE3.png", cardH3Title: "Keyboard", Price: "$8.00 USD", category: "Keyboard" },
+  { id: 30,star:"⭐⭐⭐" , cardImage: "../../src/ProductImage/KE4.png", cardH3Title: "Keyboard", Price: "$45.00 USD", category: "Keyboard" },
+  { id: 31,star:"⭐⭐" , cardImage: "../../src/ProductImage/KE5.png", cardH3Title: "Keyboard", Price: "$50.00 USD" ,  category: "Keyboard" },
 ];

@@ -19,4 +19,5 @@
 #ParaNot { 
     position: relative; 
     bottom: 30px;
+    color: var( --font-Color);
 }
