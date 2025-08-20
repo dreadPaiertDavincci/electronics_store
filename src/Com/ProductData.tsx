@@ -66,33 +66,36 @@ export const ProductData: ProductDataType[] = [
   { id: 44, cardImage: "../../src/ProductImage/LAP2.png", cardH3Title: "Laptop", Price: "$240.00 USD", category: "laptop" },
   { id: 45, cardImage: "../../src/ProductImage/LAP3.png", cardH3Title: "Laptop", Price: "$307.00 USD", category: "laptop" },
   { id: 46, cardImage: "../../src/ProductImage/LAP4.png", cardH3Title: "Laptop", Price: "$349.00 USD", category: "laptop" },
-  
+  /////////////////////Secreen///////////////////////////////
+  { id: 47, cardImage: "../../src/ProductImage/SC1.png", cardH3Title: "Mintor", Price: "$325.00 USD", category: "mintor" },
+  { id: 48, cardImage: "../../src/ProductImage/SC2.png", cardH3Title: "Mintor", Price: "$340.00 USD", category: "mintor" },
+
 
 ];
 
 export const HomeProduct: ProductDataType[] = [
-  { id: 4, cardImage: "../../src/HomeImage/GA1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 5, cardImage: "../../src/HomeImage/GA2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 6, cardImage: "../../src/HomeImage/GA3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 7, cardImage: "../../src/HomeImage/GA4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 8, cardImage: "../../src/HomeImage/GA5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 9, cardImage: "../../src/HomeImage/GA6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 49, cardImage: "../../src/HomeImage/GA1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 50, cardImage: "../../src/HomeImage/GA2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 51, cardImage: "../../src/HomeImage/GA3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 52, cardImage: "../../src/HomeImage/GA4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 53, cardImage: "../../src/HomeImage/GA5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 54, cardImage: "../../src/HomeImage/GA6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
 ];
 
 export const HomeProduct2: ProductDataType[] = [
-  { id: 10, cardImage: "../../src/HomeImage/AR1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
-  { id: 11, cardImage: "../../src/HomeImage/AR2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
-  { id: 12, cardImage: "../../src/HomeImage/AR3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
-  { id: 13, cardImage: "../../src/HomeImage/AR4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
-  { id: 14, cardImage: "../../src/HomeImage/AR5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
-  { id: 15, cardImage: "../../src/HomeImage/AR6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 55, cardImage: "../../src/HomeImage/AR1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 56, cardImage: "../../src/HomeImage/AR2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 57, cardImage: "../../src/HomeImage/AR3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 58, cardImage: "../../src/HomeImage/AR4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 59, cardImage: "../../src/HomeImage/AR5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
+  { id: 60, cardImage: "../../src/HomeImage/AR6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Airpod" },
 ];
 
 export const HomeProduct3: ProductDataType[] = [
-  { id: 16, cardImage: "../../src/HomeImage/K1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 17, cardImage: "../../src/HomeImage/K2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 18, cardImage: "../../src/HomeImage/K3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 19, cardImage: "../../src/HomeImage/K4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 20, cardImage: "../../src/HomeImage/K5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  { id: 21, cardImage: "../../src/HomeImage/K6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 61, cardImage: "../../src/HomeImage/K1.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 62, cardImage: "../../src/HomeImage/K2.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 63, cardImage: "../../src/HomeImage/K3.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 64, cardImage: "../../src/HomeImage/K4.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 65, cardImage: "../../src/HomeImage/K5.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
+  { id: 66, cardImage: "../../src/HomeImage/K6.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
 ];
