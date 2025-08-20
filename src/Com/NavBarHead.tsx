@@ -12,11 +12,11 @@ function NavBarHead() {
       </div>
       <div className="favuret_Cart_User">
         <div className="iconCon">
-          <Link to="/CartPage"><i id="icones" className="bxr  bx-calendar-heart"></i></Link>
+          <Link to="/Favuret"><i id="icones" className="bxr  bx-calendar-heart"></i></Link>
           <span className="cartSpan">0</span>
         </div>
         <div className="iconCon">
-         <Link to="/Favuret"><i id="icones" className="bx  bx-shopping-bag-alt"></i></Link>
+         <Link to="/CartPage"><i id="icones" className="bx  bx-shopping-bag-alt"></i></Link>
           <span className="cartSpan">0</span>
         </div>
       </div>
