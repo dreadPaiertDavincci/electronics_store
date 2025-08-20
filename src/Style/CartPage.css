@@ -12,8 +12,8 @@
 }
 .ContinarCardCart {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+ 
   padding: 10px;
   position: relative;
   bottom: 50px;
