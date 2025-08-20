@@ -4,6 +4,7 @@ import { MdArrowCircleRight } from "react-icons/md";
 import { ProductData } from "../Com/ProductData";
 import "../Style/Shop.css";
 import ProductCard from "../Com/ProductCard";
+import Footer from "./Footer";
 function Shop() {
   const allCategories = useMemo(() =>
       Array.from(new Set(ProductData.map((p) => (p.category || "").trim())))
@@ -20,7 +21,7 @@ function Shop() {
     "StarnX",
   ];
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [selectedCategory, setSelectedCategory] = useState<string>("Camera");
+  const [selectedCategory , setSelectedCategory] = useState<string>("Camera");
   const normalize = (s: string) => s.trim().toLowerCase();
   const filteredCategories = allCategories.filter((cat) =>
     normalize(cat).includes(normalize(searchTerm))
@@ -29,7 +30,7 @@ function Shop() {
     normalize(brand).includes(normalize(searchTerm))
   );
   const filteredProducts = useMemo(() => {
-    if (selectedCategory === "All") return ProductData;
+
     return ProductData.filter(
       (p) => normalize(p.category || "") === normalize(selectedCategory)
     );
@@ -93,6 +94,7 @@ function Shop() {
           />
         ))}
       </div>
+      <Footer />
     </section>
   );
 }
