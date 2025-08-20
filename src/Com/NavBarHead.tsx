@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "../Style/NavBar.css";
 import SearchField from "./SearchField";
 function NavBarHead() {
@@ -11,11 +12,11 @@ function NavBarHead() {
       </div>
       <div className="favuret_Cart_User">
         <div className="iconCon">
-          <i id="icones" className="bxr  bx-calendar-heart"></i>
+          <Link to="/CartPage"><i id="icones" className="bxr  bx-calendar-heart"></i></Link>
           <span className="cartSpan">0</span>
         </div>
         <div className="iconCon">
-          <i id="icones" className="bx  bx-shopping-bag-alt"></i>
+         <Link to="/Favuret"><i id="icones" className="bx  bx-shopping-bag-alt"></i></Link>
           <span className="cartSpan">0</span>
         </div>
       </div>

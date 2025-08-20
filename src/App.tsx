@@ -12,6 +12,8 @@ import Privacy_Policy from "./Page/Privacy_Policy";
 import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
 import ShowCard from "./Com/ShowCard";
+import CartPage from "./Page/CartPage";
+import Favuret from "./Page/Favuret";
 
 function App() {
   return (
@@ -29,6 +31,10 @@ function App() {
         <Route path="/privacypolicy" element={<Privacy_Policy />} />
         <Route path="/p404" element={<P404 />} />
         <Route path="/product/:id" element={<ShowCard />} />
+
+        <Route path="/CartPage" element={<CartPage />}  />
+        <Route path="/Favuret" element={<Favuret  />}  />
+        
       </Routes>
     </BrowserRouter>
   );

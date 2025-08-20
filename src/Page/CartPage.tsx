@@ -1,7 +1,11 @@
 function CartPage(){ 
     return(      
         <section className="cartPageSection">
-            <h1>Hello in cart Page</h1>
+            
+           <div className="ContinarCardCart"> 
+             
+           </div>
+
         </section>    
     );
 }
