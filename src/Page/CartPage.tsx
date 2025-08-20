@@ -5,8 +5,6 @@ function CartPage() {
     <section className="cartPageSection">
       <div className="InfoCon">
         <div className="ContinarCardCart">
-
-
           <div className="cartCard">
             <div className="CartImage">
               <img
