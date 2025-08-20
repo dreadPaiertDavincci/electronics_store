@@ -65,11 +65,11 @@
 /*//////Cards Style////////*/
 .products-container {
   position: relative;
-  right: 160px;
-  width: 800px;
+ 
+  width: 1000px;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 50px;
+  gap: 100px;
 }
 .ShopSction {
   display: flex;

@@ -1,28 +1,55 @@
 import { useParams, Link } from "react-router-dom";
-import { ProductData, HomeProduct, HomeProduct2, HomeProduct3 } from "./ProductData";
+import {
+  ProductData,
+  HomeProduct,
+  HomeProduct2,
+  HomeProduct3,
+} from "./ProductData";
 import "../Style/ShowCard.css";
 import { AiOutlineHeart } from "react-icons/ai";
+import Footer from "../Page/Footer";
+import { useState, type ChangeEvent } from "react";
 
+interface numberType { 
+   Counter:number; 
+}
 function ShowCard() {
+
+  const[cout , setCount]  = useState<numberType>(
+    {Counter:1}
+  );
+
+  const handleChang = (e:ChangeEvent<HTMLInputElement>) => {
+    const {value , name}  = e.target; 
+    setCount({ ...cout , [name]:value});  }
+
   const { id } = useParams<{ id: string }>();
-  const allProducts = [...ProductData, ...HomeProduct, ...HomeProduct2, ...HomeProduct3];
+  const allProducts = [
+    ...ProductData,
+    ...HomeProduct,
+    ...HomeProduct2,
+    ...HomeProduct3,
+  ];
   const product = allProducts.find((p) => p.id === Number(id));
 
   if (!product) {
     return (
       <div className="showcard-notfound">
         <h2>Product Not Found</h2>
-        <Link to="/shop" className="back-link">Back to Shop</Link>
+        <Link to="/shop" className="back-link">
+          Back to Shop
+        </Link>
       </div>
     );
   }
 
   return (
+    <>
     <div className="show-page">
       <div className="show-card">
-                <div className="show-left">
+        <div className="show-left">
           <img
-               src={product.cardImage}
+            src={product.cardImage}
             alt={product.cardH3Title}
             className="show-image"
           />
@@ -32,11 +59,15 @@ function ShowCard() {
           <div className="show-rating">⭐⭐⭐⭐</div>
           <p className="show-price">{product.Price}</p>
           <p className="show-desc">
-            This is a high-quality product designed to meet your needs.
-            Enjoy premium quality and elegant design that fits your lifestyle.
+            This is a high-quality product designed to meet your needs. Enjoy
+            premium quality and elegant design that fits your lifestyle.
           </p>
           <div className="cart-actions">
-            <input type="number" defaultValue={1} min={1} />
+            <input onChange={handleChang}
+            value={cout.Counter} 
+            name="Counter" 
+            type="number" 
+            defaultValue={1} min={1} />
             <button className="add-cart-btn">Add to Cart</button>
             <button className="wishlist-btn">
               <AiOutlineHeart size={22} />
@@ -51,10 +82,14 @@ function ShowCard() {
             <i>🐦</i>
             <i>📌</i>
           </div>
-          <Link to="/shop" className="back-link">← Back to Shop</Link>
+          <Link to="/shop" className="back-link">
+            ← Back to Shop
+          </Link>
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
