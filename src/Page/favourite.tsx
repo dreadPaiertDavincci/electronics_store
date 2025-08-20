@@ -1,5 +1,5 @@
 import React from "react";
-import { FaShoppingCart, FaTrash } from "react-icons/fa"; // سلة و أيقونة الحذف
+import { FaShoppingCart, FaTrash } from "react-icons/fa"; 
 import "../Style/favourite.css";
 
 const Favourite: React.FC = () => {
@@ -7,11 +7,9 @@ const Favourite: React.FC = () => {
     <section className="favouriteSection">
       <div className="pp-card">
         <div className="pp-image-wrapper">
-          {/* زر الحذف */}
           <button className="pp-delete-btn">
             <FaTrash />
           </button>
-
           <img
             src="/e.png"
             alt="Huawei Watch Fit 3"
