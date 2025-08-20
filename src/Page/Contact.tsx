@@ -1,22 +1,50 @@
-import React, { useState, type ChangeEvent } from "react";
+import React, { useState, type ChangeEvent, type FormEvent } from "react";
 import "../Style/Contact.css";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import Footer from "./Footer";
 
-interface contactData { 
-  firstName:string, 
-  lastName:string, 
-  email:string,
-  subject:string,
-  message:string
+interface contactData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 const Contact: React.FC = () => {
-  const [contact , setContact]  = useState<contactData>(
-    {firstName: "" , lastName:"", email:"",subject:"" ,message:""}
-  );
-  const handleChang = (e:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    
-  }
+  const [contact, setContact] = useState<contactData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleChang = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { value, name } = e.target;
+    setContact({ ...contact, [name]: value });
+  };
+  const handlesubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const { firstName, lastName, email, subject, message } = contact;
+    if (
+      !firstName.trim() ||
+      !lastName.trim() ||
+      !email.trim() ||
+      !subject.trim() ||
+      !message.trim()
+    ) {
+      alert("Contact Field Error !!");
+      return;
+    }
+    setContact({
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
   return (
     <section className="contact-section">
       <div className="contact-container">
@@ -24,17 +52,52 @@ const Contact: React.FC = () => {
           <p className="form-subtitle">Say Hi, Make Custom Request</p>
           <h2 className="form-title">We would love to hear from you!</h2>
 
-          <form className="contactForm">
+          <form className="contactForm" onSubmit={handlesubmit}>
             <div className="form-row">
-              <input id="COID" type="text" placeholder="First Name" />
-              <input id="COID" type="text" placeholder="Last Name" />
+              <input
+                onChange={handleChang}
+                name="firstName"
+                value={contact.firstName}
+                id="COID"
+                type="text"
+                placeholder="First Name"
+              />
+              <input
+                onChange={handleChang}
+                name="lastName"
+                value={contact.lastName}
+                id="COID"
+                type="text"
+                placeholder="Last Name"
+              />
             </div>
 
             <div className="form-row">
-              <input id="COID" type="email" placeholder="Email" />
-              <input id="COID" type="text" placeholder="Subject" />
+              <input
+                onChange={handleChang}
+                name="email"
+                value={contact.email}
+                id="COID"
+                type="email"
+                placeholder="Email"
+              />
+              <input
+                onChange={handleChang}
+                name="subject"
+                value={contact.subject}
+                id="COID"
+                type="text"
+                placeholder="Subject"
+              />
             </div>
-            <textarea id="COIDt" placeholder="Your Message" rows={6}></textarea>
+            <textarea
+              onChange={handleChang}
+              name="message"
+              value={contact.message}
+              id="COIDt"
+              placeholder="Your Message"
+              rows={6}
+            ></textarea>
             <button type="submit" className="submit-btn">
               Send Message
             </button>
