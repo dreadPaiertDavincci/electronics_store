@@ -1,6 +1,6 @@
-type ProductDataType = {
+export type ProductDataType = {
   id: number;
-  cardImage: string;
+  cardImage: string;   
   cardH3Title: string;
   Price: string;
   category: string;
@@ -10,7 +10,6 @@ export const ProductData: ProductDataType[] = [
   { id: 1, cardImage: "../../src/ProductImage/test.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
   { id: 2, cardImage: "../../src/ProductImage/test.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
   { id: 3, cardImage: "../../src/ProductImage/test.png", cardH3Title: "Blue Ear Muffs", Price: "$79.00 USD", category: "Game" },
-  
 ];
 
 export const HomeProduct: ProductDataType[] = [
