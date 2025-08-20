@@ -13,7 +13,7 @@ import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
 import ShowCard from "./Com/ShowCard";
 import CartPage from "./Page/CartPage";
-import Favuret from "./Page/Favuret";
+import Favuret from "./Page/favourite";
 
 function App() {
   return (
