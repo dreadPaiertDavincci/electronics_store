@@ -13,7 +13,7 @@ import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
 import ShowCard from "./Com/ShowCard";
 import CartPage from "./Page/CartPage";
-import Favuret from "./Page/favourite";
+import Favourite from "./Page/favourite";
 
 function App() {
   return (
@@ -33,8 +33,8 @@ function App() {
         <Route path="/product/:id" element={<ShowCard />} />
 
         <Route path="/CartPage" element={<CartPage />}  />
-        <Route path="/Favuret" element={<Favuret  />}  />
-        
+        <Route path="/Favuret" element={<Favourite  />}  />
+
       </Routes>
     </BrowserRouter>
   );

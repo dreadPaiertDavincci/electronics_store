@@ -9,6 +9,7 @@ import "../Style/ShowCard.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import Footer from "../Page/Footer";
 import { useState, type ChangeEvent } from "react";
+import HeartButton from "./HeartButton";
 
 interface numberType { 
    Counter:number; 
@@ -56,7 +57,7 @@ function ShowCard() {
         </div>
         <div className="show-details">
           <h2>{product.cardH3Title}</h2>
-          <div className="show-rating">⭐⭐⭐⭐</div>
+          <div className="show-rating">{product.star}</div>
           <p className="show-price">{product.Price}</p>
           <p className="show-desc">
             This is a high-quality product designed to meet your needs. Enjoy
@@ -69,9 +70,7 @@ function ShowCard() {
             type="number" 
             defaultValue={1} min={1} />
             <button className="add-cart-btn">Add to Cart</button>
-            <button className="wishlist-btn">
-              <AiOutlineHeart size={22} />
-            </button>
+            <HeartButton />
           </div>
           <p className="show-sku">
             <strong>SKU:</strong> NX8SA6IJ

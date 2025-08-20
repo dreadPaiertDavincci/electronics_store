@@ -1,11 +1,12 @@
-import "../Style/CartPage.css";
+import "../Style/CartFavuret.css";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
+import Footer from "./Footer";
 function CartPage() {
   return (
+    <> 
     <section className="cartPageSection">
       <div className="InfoCon">
         <div className="ContinarCardCart">
-            
           <div className="cartCard">
             <div className="CartImage">
               <img
@@ -35,14 +36,18 @@ function CartPage() {
           </div>
         </div>
 
-
         <div className="ButtTotalContinar">
           <h1 id="TOID">Total Price</h1>
           <p id="priceToT">0000$</p>
-          <button className="SubmitBtn" type="submit">Submit</button>
+          <button className="SubmitBtn" type="submit">
+            Submit
+          </button>
         </div>
       </div>
     </section>
+
+    <Footer />
+    </>
   );
 }
 export default CartPage;

@@ -6,7 +6,8 @@ import "../Style/Shop.css";
 import ProductCard from "../Com/ProductCard";
 import Footer from "./Footer";
 function Shop() {
-  const allCategories = useMemo(() =>
+  const allCategories = useMemo(
+    () =>
       Array.from(new Set(ProductData.map((p) => (p.category || "").trim())))
         .filter((c) => c.length > 0)
         .sort(),
@@ -21,7 +22,7 @@ function Shop() {
     "StarnX",
   ];
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [selectedCategory , setSelectedCategory] = useState<string>("Camera");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Camera");
   const normalize = (s: string) => s.trim().toLowerCase();
   const filteredCategories = allCategories.filter((cat) =>
     normalize(cat).includes(normalize(searchTerm))
@@ -30,13 +31,13 @@ function Shop() {
     normalize(brand).includes(normalize(searchTerm))
   );
   const filteredProducts = useMemo(() => {
-
     return ProductData.filter(
       (p) => normalize(p.category || "") === normalize(selectedCategory)
     );
   }, [selectedCategory]);
 
   return (
+    <>
     <section className="ShopSction">
       <aside className="sidebar">
         <div className="search-box">
@@ -51,13 +52,7 @@ function Shop() {
         </div>
         <h3 className="section-title">Categories</h3>
         <ul className="list-box">
-          <li
-            className={`list-item ${selectedCategory === "All" ? "active" : ""}`}
-            onClick={() => setSelectedCategory("All")}
-            style={{ cursor: "pointer" }}
-          >
-       
-          </li>
+      
           {filteredCategories.map((cat) => (
             <li
               key={cat}
@@ -94,8 +89,12 @@ function Shop() {
           />
         ))}
       </div>
-      <Footer />
+   
     </section>
+      <div className="ShopFooter"> 
+       <Footer />
+     </div>
+     </>
   );
 }
 

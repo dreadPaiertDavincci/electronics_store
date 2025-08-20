@@ -139,3 +139,17 @@
 .SilConti:hover {
   color: red;
 }
+.favuButton { 
+  background-color: var(--Primary-Color);
+  color: white;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  transition: .5s;
+  cursor: pointer;
+}
+.favuButton:hover {
+  background-color: rgb(3, 3, 112);
+}

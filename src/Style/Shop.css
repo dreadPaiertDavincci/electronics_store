@@ -90,3 +90,11 @@
   width: 100%;
   height: 200px;
 }
+.list-item.active {
+  color:var(--Primary-Color);
+  font-weight: bold;         /* يبين إنه محدد */
+}
+
+.list-item.active .list-icon {
+  color: white; /* أيقونة كمان */
+}
