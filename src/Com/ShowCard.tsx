@@ -1,43 +1,40 @@
 import React from "react";
-import "../Style/ShowCard.css"; 
+import { useParams } from "react-router-dom";
+import { ProductData } from "../Com/ProductData";
+import "../Style/ShowCard.css";
 
 const ProductPage: React.FC = () => {
-  return (
-    <div className="product-page">
-      <div className="product-card">
-        
-        <div className="product-left">
-          <img
-            src="https://via.placeholder.com/300x500.png?text=Fitness+Tracker"
-            alt="Fitness Tracker"
-            className="product-image"
-          />
+  const { id } = useParams<{ id: string }>();
+  const product = ProductData.find(p => p.id === Number(id));
 
-          <div className="product-thumbs">
-            <img src="https://via.placeholder.com/80x120.png?text=Img1" alt="thumb1" />
-            <img src="https://via.placeholder.com/80x120.png?text=Img2" alt="thumb2" />
-            <img src="https://via.placeholder.com/80x120.png?text=Img3" alt="thumb3" />
+  if (!product) return <h2>Product Not Found</h2>;
+
+  return (
+    <div className="show-page">
+      <div className=" show-card">
+        {/* صورة المنتج */}
+        <div className="show-left">
+          <img src={product.mainImage} alt={product.name} className="show-image" />
+          <div className="show-thumbs">
+            {product.thumbs.map((thumb, index) => (
+              <img key={index} src={thumb} alt={`thumb${index + 1}`} />
+            ))}
           </div>
         </div>
 
-        <div className="product-details">
-          <h2>Fitness Tracker</h2>
-          <div className="product-rating">⭐⭐⭐⭐</div>
-          <p className="product-price">$ 80.00 USD</p>
-          <p className="product-desc">
-            Effect font move vertical share. Connection frame edit export
-            arrow. Undo device move opacity image layer. List star blur
-            strikethrough arrow.
-          </p>
+        {/* تفاصيل المنتج */}
+        <div className="show-details">
+          <h2>{product.name}</h2>
+          <div className="show-rating">{product.rating}</div>
+          <p className="show-price">{product.price}</p>
+          <p className="show-desc">{product.desc}</p>
 
           <div className="cart-actions">
             <input type="number" defaultValue={1} min={1} />
             <button>Add to Cart</button>
           </div>
 
-          <p className="product-sku">
-            <strong>SKU:</strong> NX8SA6IJ
-          </p>
+          <p className="show-sku"><strong>SKU:</strong> {product.sku}</p>
 
           <div className="share">
             <span>Share:</span>
