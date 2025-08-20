@@ -22,7 +22,8 @@
 }
 
 .show-image {
-  width: 390px;
+  padding: 0 20px;
+  width: 280px;
   height: 400px;
   border-radius: 12px;
   margin: 0 auto;
