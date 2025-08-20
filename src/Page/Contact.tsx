@@ -12,17 +12,17 @@ const Contact: React.FC = () => {
           <p className="form-subtitle">Say Hi, Make Custom Request</p>
           <h2 className="form-title">We would love to hear from you!</h2>
 
-          <form>
+          <form className="contactForm">
             <div className="form-row">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
+              <input id="COID" type="text" placeholder="First Name" />
+              <input id="COID" type="text" placeholder="Last Name" />
             </div>
 
             <div className="form-row">
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Subject" />
+              <input id="COID" type="email" placeholder="Email" />
+              <input id="COID" type="text" placeholder="Subject" />
             </div>
-            <textarea placeholder="Your Message" rows={6}></textarea>
+            <textarea id="COIDt" placeholder="Your Message" rows={6}></textarea>
             <button type="submit" className="submit-btn">
               Send Message
             </button>

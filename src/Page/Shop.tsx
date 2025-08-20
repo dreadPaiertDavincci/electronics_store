@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { MdArrowCircleRight } from "react-icons/md";
 import { ProductData } from "../Com/ProductData";
-import "../Style/Sidebar.css";
+import "../Style/Shop.css";
 import ProductCard from "../Com/ProductCard";
 function Shop() {
   const categories: string[] = [

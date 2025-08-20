@@ -1,6 +1,5 @@
 
 
-/* الحاوية الرئيسية */
 .contact-container {
   display: flex;
   justify-content: space-between;
@@ -12,14 +11,13 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* القسم اليسار - الفورم */
 .contact-form {
   flex: 1;
   max-width: 500px;
 }
 
 .form-subtitle {
-  color: #e63946;
+  color: #520eff;
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 3px;
@@ -34,7 +32,7 @@
 }
 
 /* الفورم */
-form {
+.contactForm {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -50,8 +48,7 @@ form {
 }
 
 /* الحقول */
-input,
-textarea {
+#COID {
   width: 100%;
   max-width: 100%;
   border: 1px solid #ddd;
@@ -65,13 +62,30 @@ textarea {
   box-sizing: border-box;
 }
 
-input:focus,
-textarea:focus {
+#COID:focus {
   border-color: #e63946;
   box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
 }
 
-textarea {
+
+#COIDt { 
+    width: 100%;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+#COIDt:focus { 
+  border-color: #e63946;
+  box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
+}
+#COIDt {
   resize: none;
   min-height: 140px;
 }
@@ -149,12 +163,12 @@ textarea {
   justify-content: center;
   gap: 7px;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* انتقال سلس */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .contact-card:hover {
-  transform: translateY(-5px); /* رفع الكرت قليلًا */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* تكبير الظل */
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .contact-icon {
@@ -166,7 +180,7 @@ textarea {
   font-size: 18px;
   border-bottom: 2px solid #000;
   padding-bottom: 0px;
-  margin: 0; /* إزالة أي مسافات خارجية */
+  margin: 0; /* إزالة  خارجية */
 }
 
 .contact-description {
