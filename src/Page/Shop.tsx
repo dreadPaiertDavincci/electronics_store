@@ -14,7 +14,7 @@ function Shop() {
     "Laptop",
     "Monitor",
     "Mouse",
-    "Phone",
+    "Airpod",
     "PS5",
     "XBOX",
     "PS4"
