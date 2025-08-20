@@ -13,29 +13,25 @@ import P404 from "./Page/P404";
 import Contact from "./Page/Contact";
 import ShowCard from "./Com/ShowCard";
 
-
-function App (){
-   return(
+function App() {
+  return (
     <BrowserRouter>
       <NavBarHead />
       <NavBar />
       <Routes>
-       <Route path = "/" element={<Home />} />
-       <Route path = "/about" element={<About />} />
-       <Route path = "/shop" element={<Shop />} />
-       <Route path = "/blog" element = {<Blog />}  />
-       <Route path = "/contact" element={<Contact />} />
-       <Route path = "/faq" element={<FAQ />} />
-       <Route path = "/licenses" element = {<Licenses />}/>
-       <Route path = "/privacypolicy" element = {<Privacy_Policy />} />
-       <Route path =  "/p404" element = {<P404 />} />
-       <Route path="/product" element={<ShowCard/>} /> 
-       <Route path="/product/:id" element={<ShowCard/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/licenses" element={<Licenses />} />
+        <Route path="/privacypolicy" element={<Privacy_Policy />} />
+        <Route path="/p404" element={<P404 />} />
+        <Route path="/product/:id" element={<ShowCard />} />
       </Routes>
     </BrowserRouter>
-      
-   );
+  );
 }
 
-
-export default App; 
+export default App;

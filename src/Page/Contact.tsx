@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      <div className="FooterHom">
+      <div className="contactFooter">
         <Footer />
       </div>
     </section>

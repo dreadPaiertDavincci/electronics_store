@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import { HomeProduct, HomeProduct2, HomeProduct3 } from "./ProductData";
 import "../Style/TABS.css";
 import ProductCard from "./ProductCard";
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -44,23 +45,21 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: "100%", height: "900px" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Game" {...a11yProps(0)} />
           <Tab label="Airpod" {...a11yProps(1)} />
           <Tab label="Keyboard" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      {/*Card*/}
+
+      {/* Game Tab */}
       <CustomTabPanel value={value} index={0}>
         <div className="VAC">
           <div className="cardCon">
-            {HomeProduct.map((element, index) => (
+            {HomeProduct.map((element) => (
               <ProductCard
-                key={index}
+                key={element.id}
+                id={element.id}
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}
@@ -69,12 +68,15 @@ export default function BasicTabs() {
           </div>
         </div>
       </CustomTabPanel>
+
+      {/* Airpod Tab */}
       <CustomTabPanel value={value} index={1}>
         <div className="VAC">
           <div className="cardCon">
-            {HomeProduct2.map((element, index) => (
+            {HomeProduct2.map((element) => (
               <ProductCard
-                key={index}
+                key={element.id}
+                id={element.id}
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}
@@ -83,12 +85,15 @@ export default function BasicTabs() {
           </div>
         </div>
       </CustomTabPanel>
+
+      {/* Keyboard Tab */}
       <CustomTabPanel value={value} index={2}>
         <div className="VAC">
           <div className="cardCon">
-            {HomeProduct3.map((element, index) => (
+            {HomeProduct3.map((element) => (
               <ProductCard
-                key={index}
+                key={element.id}
+                id={element.id}
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}

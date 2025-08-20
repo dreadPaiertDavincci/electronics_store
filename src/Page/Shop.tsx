@@ -4,10 +4,7 @@ import { MdArrowCircleRight } from "react-icons/md";
 import { ProductData } from "../Com/ProductData";
 import "../Style/Sidebar.css";
 import ProductCard from "../Com/ProductCard";
-import { Link } from "react-router-dom";
 function Shop() {
-
-
   const categories: string[] = [
     "CCTV",
     "Camera",
@@ -45,7 +42,7 @@ function Shop() {
         {/* Search Box */}
         <div className="search-box">
           <input
-          className="inputCA"
+            className="inputCA"
             type="text"
             placeholder="Search..."
             value={searchTerm}
@@ -77,16 +74,16 @@ function Shop() {
         </ul>
       </aside>
 
-{/* Products */}
+      {/* Products */}
       <div className="products-container">
-        {ProductData.map((p) => (
-          <Link key={p.id} to={`/product/${p.id}`}>
-            <ProductCard
-              image={p.cardImage}
-              title={p.cardH3Title}
-              price={p.Price}
-            />
-          </Link>
+           {ProductData.map((p) => (
+          <ProductCard
+            key={p.id}
+            image={p.cardImage}
+            title={p.cardH3Title}
+            price={p.Price}
+            id={p.id}  
+          />
         ))}
       </div>
     </section>

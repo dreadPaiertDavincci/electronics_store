@@ -155,6 +155,7 @@ function Home() {
       <div className="FooterHom">
         <Footer />
       </div>
+      
     </section>
   );
 }
