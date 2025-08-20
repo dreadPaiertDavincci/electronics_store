@@ -6,9 +6,8 @@ import "../Style/Shop.css";
 import ProductCard from "../Com/ProductCard";
 function Shop() {
   const categories: string[] = [
-    "CCTV",
     "Camera",
-    "Earbuds",
+    "Watch",
     "Headphone",
     "Joystick",
     "Keyboard",
@@ -16,6 +15,9 @@ function Shop() {
     "Monitor",
     "Mouse",
     "Phone",
+    "PS5",
+    "XBOX",
+    "PS4"
   ];
 
   const brands: string[] = [

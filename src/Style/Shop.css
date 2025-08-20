@@ -63,9 +63,15 @@
   opacity: 1;
 }
 /*//////Cards Style////////*/
-
+.products-container {
+  position: relative;
+  right: 160px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+}
 .ShopSction {
-  flex: 1;                  
   display: flex;
   flex-wrap: wrap;         
   gap: 1rem;
