@@ -76,7 +76,7 @@ function Shop() {
 
       {/* Products */}
       <div className="products-container">
-           {ProductData.map((p) => (
+        {ProductData.map((p) => (
           <ProductCard
             key={p.id}
             image={p.cardImage}
