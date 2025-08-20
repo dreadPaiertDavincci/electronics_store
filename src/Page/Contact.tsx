@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState, type ChangeEvent } from "react";
 import "../Style/Contact.css";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import Footer from "./Footer";
+
+interface contactData { 
+  firstName:string, 
+  lastName:string, 
+  email:string,
+  subject:string,
+  message:string
+}
 const Contact: React.FC = () => {
+  const [contact , setContact]  = useState<contactData>(
+    {firstName: "" , lastName:"", email:"",subject:"" ,message:""}
+  );
+  const handleChang = (e:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    
+  }
   return (
     <section className="contact-section">
-      {/* Main Container: Form + Image */}
       <div className="contact-container">
-        {/* Left Side - Form */}
         <div className="contact-form">
           <p className="form-subtitle">Say Hi, Make Custom Request</p>
           <h2 className="form-title">We would love to hear from you!</h2>
@@ -29,7 +41,6 @@ const Contact: React.FC = () => {
           </form>
         </div>
 
-        {/* Right Side - Image */}
         <div className="contact-image">
           <img src="/contact.png" alt="Contact Support" />
         </div>
