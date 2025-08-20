@@ -1,2 +1,107 @@
 @import "./Them.css";
 
+.cartPageSection{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.InfoCon { 
+    display: flex;
+    gap: 20px;
+}
+.ContinarCardCart {
+    padding: 10px;
+    position: relative;
+    bottom: 50px;
+    border-radius: 5px;
+    border: solid 1px rgba(40, 40, 40, 0.149);
+    height: 500px;
+    width: 1020px;
+    display: grid;
+     overflow-y: auto;  
+    gap: 10px;
+    grid-template-columns: auto auto;
+}
+.ButtTotalContinar { 
+    position: relative;
+    border-radius: 5px;
+    border: solid 1px rgba(40, 40, 40, 0.149);
+    bottom: 50px;
+    width: 200px; 
+    height: 250px;
+    
+}
+
+.cartCard {
+    background-color: var( --CardColor) ;
+     height:  200px; 
+     width: 500px;
+     border-radius:5px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+.CartImage { 
+    width: 150px;
+    height: 100%;
+}
+#cartStar {
+     position: relative;
+     right: 10px;
+}
+#cartTi { 
+    position: relative;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: var(--Primary-Color);
+
+}
+#cartPa {
+    position: relative;
+    bottom: 5px;
+    right: 10px;
+    font-size: 15px;
+    color: var(--font-Color);
+}
+.PriceCart { 
+    position: relative;
+    right: 10px;
+    font-size: 20px;
+
+}
+.PriceContinar { 
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cartCardFieldId { 
+    width: 50px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px; 
+    
+}
+#cartimage { 
+    width: 150px;
+    height: 100%;
+}
+.SilConti { 
+    position: relative;
+    right:  10px; 
+    font-size: 25px;
+     color: var(--font-Color);
+     cursor: pointer;
+     transition: .5s;
+}
+.SilConti:hover {
+    color: red;
+     
+}

@@ -25,17 +25,18 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-}
+
 
 .product-image {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 12px;
+  transition: .5s;
 }
-
+.product-image:hover {
+  transform: scale(1.1);
+}
 .product-info {
   display: flex;
   flex-direction: column;
