@@ -11,7 +11,7 @@ function Favourite() {
               <div className="CartImage">
                 <img
                   id="cartimage"
-                  src="../../src/HomeImage/C1.png"
+                  src="/Background.png"
                   alt="tahiyati"
                 />
               </div>
