@@ -1,7 +1,17 @@
 import "../Style/CartFavuret.css";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import Footer from "./Footer";
+import { useState, type ChangeEvent } from "react";
+interface CartPageCounter  { 
+  Counter:number; 
+}
 function CartPage() {
+  const [count , setCount]  = useState<CartPageCounter>({Counter:0});
+  const handleChang = (e:ChangeEvent<HTMLInputElement>)=> {
+    const {value , name} = e.target; 
+    setCount({...count , [name]:value});
+  }
+
   return (
     <> 
     <section className="cartPageSection">
@@ -23,7 +33,9 @@ function CartPage() {
                 <p className="PriceCart">Price: 000$</p>
                 <input
                   type="number"
-                  name=""
+                  name="Counter"
+                  value={count.Counter}
+                  onChange={handleChang}
                   defaultValue={1}
                   min={1}
                   id="cartCardFieldId"

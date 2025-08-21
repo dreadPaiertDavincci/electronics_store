@@ -6,7 +6,6 @@ import {
   HomeProduct3,
 } from "./ProductData";
 import "../Style/ShowCard.css";
-import { AiOutlineHeart } from "react-icons/ai";
 import Footer from "../Page/Footer";
 import { useState, type ChangeEvent } from "react";
 import HeartButton from "./HeartButton";
