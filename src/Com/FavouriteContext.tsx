@@ -22,7 +22,6 @@ export const FavouriteProvider = ({ children }: { children: ReactNode }) => {
     setFavourites((prev) => {
       const exists = prev.find((p) => p.id === product.id);
       if (exists) {
-        // ✅ إذا موجود ينحذف
         return prev.filter((p) => p.id !== product.id);
       } else {
         // ✅ إذا مش موجود ينضاف

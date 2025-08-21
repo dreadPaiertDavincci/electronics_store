@@ -9,6 +9,7 @@ function NavBarHead() {
  // sum : هوه المتغير الي رح نخزن فيه المجموع
  // item: هاد اعتبر ال cart عبارة عن مصفوفة وبناء على عدد ال quantity عم يحسب ال total item
   const { cart } = useCart();
+
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const { favourites } = useFavourite();
