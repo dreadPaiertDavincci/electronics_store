@@ -7,6 +7,8 @@ function CartPage() {
   const { cart, updateQuantity, removeFromCart } = useCart();
 
   const totalPrice = cart.reduce((sum, item) => {
+    //let input = "Price: $123.45";
+    // النتيجة: "123.45"
     const price = Number(item.Price.replace(/[^0-9.]/g, ""));
     return sum + price * item.quantity;
   }, 0);

@@ -5,6 +5,9 @@ import { useCart } from "./CartContext";
 import { useFavourite } from "./FavouriteContext";
 
 function NavBarHead() {
+ // هذه هي القيمة الابتدائية للمجموع قبل أن يبدأ الجمع .
+ // sum : هوه المتغير الي رح نخزن فيه المجموع
+ // item: هاد اعتبر ال cart عبارة عن مصفوفة وبناء على عدد ال quantity عم يحسب ال total item
   const { cart } = useCart();
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 

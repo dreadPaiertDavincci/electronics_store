@@ -38,10 +38,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const removeFromCart = (id: number) => {
+    //احتفظ بكل المنتجات التي لا تساوي رقم المنتج المراد حذفه
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
+    //ي مكون داخل <Context.Provider> يمكنه الوصول للقيمة (value) التي يوفرها الـ Provider.
     <CartContext.Provider value={{ cart, addToCart, updateQuantity, removeFromCart }}>
       {children}
     </CartContext.Provider>

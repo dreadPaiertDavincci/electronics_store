@@ -13,6 +13,16 @@ interface Props {
 
 function HeartButton({ product }: Props) {
   const { favourites, toggleFavourite } = useFavourite();
+  /*
+  numbers = [1, 2, 3, 4, 5]
+  numbers.some((num) => num === 3);
+
+  1: num = 1 → الشرط 1 === 3 → false
+
+الخطوة   2: num = 2 → الشرط 2 === 3 → false
+
+الخطوة 3: num = 3 → الشرط 3 === 3 → true → توقف البحث، return true
+*/
   const isFav = favourites.some((p) => p.id === product.id);
 
   return (
@@ -25,7 +35,6 @@ function HeartButton({ product }: Props) {
         onChange={() => toggleFavourite(product)}
       />
       <div className="svg-container">
-        {/* نفس الـ SVG تبعك بدون تغيير */}
         <svg
           viewBox="0 0 24 24"
           className="svg-outline"

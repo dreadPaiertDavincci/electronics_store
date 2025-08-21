@@ -78,7 +78,7 @@ function ShowCard() {
               >
                 Add to Cart
               </button>
-              <HeartButton  product={product}/>
+              <HeartButton product={product}/>
             </div>
             <p className="show-sku">
               <strong>SKU:</strong> NX8SA6IJ
