@@ -13,7 +13,7 @@ function Favourite() {
       <section className="cartPageSection">
         <div className="InfoCon">
           <div className="ContinarCardCart">
-            {favourites.length === 0 && <p>No favourites yet ❤️</p>}
+          
             {favourites.map((product) => (
               <div key={product.id} className="cartCard">
                 <div className="CartImage">
