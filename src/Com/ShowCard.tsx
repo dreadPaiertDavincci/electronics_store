@@ -9,27 +9,29 @@ import "../Style/ShowCard.css";
 import Footer from "../Page/Footer";
 import { useState, type ChangeEvent } from "react";
 import HeartButton from "./HeartButton";
+import { useCart } from "./CartContext";
 
-interface numberType { 
-   Counter:number; 
+interface numberType {
+  Counter: number;
 }
+
 function ShowCard() {
+  const [cout, setCount] = useState<numberType>({ Counter: 1 });
+  const handleChang = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setCount({ ...cout, [name]: Number(value) });
+  };
 
-  const[cout , setCount]  = useState<numberType>(
-    {Counter:1}
-  );
-
-  const handleChang = (e:ChangeEvent<HTMLInputElement>) => {
-    const {value , name}  = e.target; 
-    setCount({ ...cout , [name]:value});  }
-
+  const { addToCart } = useCart();
   const { id } = useParams<{ id: string }>();
+
   const allProducts = [
     ...ProductData,
     ...HomeProduct,
     ...HomeProduct2,
     ...HomeProduct3,
   ];
+
   const product = allProducts.find((p) => p.id === Number(id));
 
   if (!product) {
@@ -45,48 +47,55 @@ function ShowCard() {
 
   return (
     <>
-    <div className="show-page">
-      <div className="show-card">
-        <div className="show-left">
-          <img
-            src={product.cardImage}
-            alt={product.cardH3Title}
-            className="show-image"
-          />
-        </div>
-        <div className="show-details">
-          <h2>{product.cardH3Title}</h2>
-          <div className="show-rating">{product.star}</div>
-          <p className="show-price">{product.Price}</p>
-          <p className="show-desc">
-            This is a high-quality product designed to meet your needs. Enjoy
-            premium quality and elegant design that fits your lifestyle.
-          </p>
-          <div className="cart-actions">
-            <input onChange={handleChang}
-            value={cout.Counter} 
-            name="Counter" 
-            type="number" 
-            defaultValue={1} min={1} />
-            <button className="add-cart-btn">Add to Cart</button>
-            <HeartButton />
+      <div className="show-page">
+        <div className="show-card">
+          <div className="show-left">
+            <img
+              src={product.cardImage}
+              alt={product.cardH3Title}
+              className="show-image"
+            />
           </div>
-          <p className="show-sku">
-            <strong>SKU:</strong> NX8SA6IJ
-          </p>
-          <div className="share">
-            <span>Share:</span>
-            <i>👍</i>
-            <i>🐦</i>
-            <i>📌</i>
+          <div className="show-details">
+            <h2>{product.cardH3Title}</h2>
+            <div className="show-rating">{product.star}</div>
+            <p className="show-price">{product.Price}</p>
+            <p className="show-desc">
+              This is a high-quality product designed to meet your needs. Enjoy
+              premium quality and elegant design that fits your lifestyle.
+            </p>
+            <div className="cart-actions">
+              <input
+                onChange={handleChang}
+                value={cout.Counter}
+                name="Counter"
+                type="number"
+                min={1}
+              />
+              <button
+                className="add-cart-btn"
+                onClick={() => addToCart(product, cout.Counter)}
+              >
+                Add to Cart
+              </button>
+              <HeartButton  product={product}/>
+            </div>
+            <p className="show-sku">
+              <strong>SKU:</strong> NX8SA6IJ
+            </p>
+            <div className="share">
+              <span>Share:</span>
+              <i>👍</i>
+              <i>🐦</i>
+              <i>📌</i>
+            </div>
+            <Link to="/shop" className="back-link">
+              ← Back to Shop
+            </Link>
           </div>
-          <Link to="/shop" className="back-link">
-            ← Back to Shop
-          </Link>
         </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 }

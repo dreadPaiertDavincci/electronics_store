@@ -1,65 +1,60 @@
 import "../Style/CartFavuret.css";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import Footer from "./Footer";
-import { useState, type ChangeEvent } from "react";
-interface CartPageCounter  { 
-  Counter:number; 
-}
+import { useCart } from "../Com/CartContext";
+
 function CartPage() {
-  const [count , setCount]  = useState<CartPageCounter>({Counter:0});
-  const handleChang = (e:ChangeEvent<HTMLInputElement>)=> {
-    const {value , name} = e.target; 
-    setCount({...count , [name]:value});
-  }
+  const { cart, updateQuantity, removeFromCart } = useCart();
+
+  const totalPrice = cart.reduce((sum, item) => {
+    const price = Number(item.Price.replace(/[^0-9.]/g, ""));
+    return sum + price * item.quantity;
+  }, 0);
 
   return (
-    <> 
-    <section className="cartPageSection">
-      <div className="InfoCon">
-        <div className="ContinarCardCart">
-          <div className="cartCard">
-            <div className="CartImage">
-              <img
-                id="cartimage"
-                src="../../src/HomeImage/C1.png"
-                alt="tahiyati"
-              />
-            </div>
-            <div className="cartCardBody">
-              <h2 id="cartTi">Airpod</h2>
-              <p id="cartPa">Lorem ipsum dolor sit amet.</p>
-              <p id="cartStar">⭐⭐⭐⭐</p>
-              <div className="PriceContinar">
-                <p className="PriceCart">Price: 000$</p>
-                <input
-                  type="number"
-                  name="Counter"
-                  value={count.Counter}
-                  onChange={handleChang}
-                  defaultValue={1}
-                  min={1}
-                  id="cartCardFieldId"
-                />
+    <>
+      <section className="cartPageSection">
+        <div className="InfoCon">
+          <div className="ContinarCardCart">
+            {cart.map((item) => (
+              <div className="cartCard" key={item.id}>
+                <div className="CartImage">
+                  <img id="cartimage" src={item.cardImage} alt={item.cardH3Title} />
+                </div>
+                <div className="cartCardBody">
+                  <h2 id="cartTi">{item.cardH3Title}</h2>
+                  <p id="cartPa">Lorem ipsum dolor sit amet.</p>
+                  <p id="cartStar">{item.star}</p>
+                  <div className="PriceContinar">
+                    <p className="PriceCart">{item.Price}</p>
+                    <input
+                      type="number"
+                      name="Counter"
+                      value={item.quantity}
+                      onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
+                      min={1}
+                      id="cartCardFieldId"
+                    />
+                  </div>
+                </div>
+                <div className="SilConti" onClick={() => removeFromCart(item.id)}>
+                  <IoIosRemoveCircleOutline />
+                </div>
               </div>
-            </div>
-            <div className="SilConti">
-              <IoIosRemoveCircleOutline />
-            </div>
+            ))}
+          </div>
+          <div className="ButtTotalContinar">
+            <h1 id="TOID">Total Price</h1>
+            <p id="priceToT">{totalPrice}$</p>
+            <button className="SubmitBtn" type="submit">
+              Submit
+            </button>
           </div>
         </div>
-
-        <div className="ButtTotalContinar">
-          <h1 id="TOID">Total Price</h1>
-          <p id="priceToT">0000$</p>
-          <button className="SubmitBtn" type="submit">
-            Submit
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <Footer />
+      </section>
+      <Footer />
     </>
   );
 }
+
 export default CartPage;
