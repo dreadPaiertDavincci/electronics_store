@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import NavBarHead from "./Com/NavBarHead";
 import NavBar from "./Page/NavBar";
@@ -16,14 +16,23 @@ import CartPage from "./Page/CartPage";
 import Favourite from "./Page/Favourite";
 import { CartProvider } from "./Com/CartContext";
 import { FavouriteProvider } from "./Com/FavouriteContext";
+import { useEffect } from "react";
 
 function App() {
+  function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
   return (
     <CartProvider>
       <FavouriteProvider>
         <BrowserRouter>
           <NavBarHead />
           <NavBar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
