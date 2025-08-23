@@ -1,12 +1,11 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import "../Style/Home.css";
-import { Link } from "react-router";
-import TABS from "../Com/TABS";
+import { Link } from "react-router-dom";
+import Tabs from "../Com/TABS";
 import Footer from "./Footer";
-import KARCARDS from "../Com/KARCARDS";
+import KarCards from "../Com/KARCARDS";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,67 +30,64 @@ function Home() {
     { ImageCate: "../../src/CategoryImage/CA5.png", CateTitle: "Watch" },
   ];
 
-  const LoopCategory = CategoryCardInfo.map((element, index) => {
-    return (
-      <div className="CardCategory" key={index}>
-        <div className="ImageCategory">
-          <img src={element.ImageCate} id="ImageIDCategory" alt="Tahiyati" />
-        </div>
-        <Link to={"/Shop"} className="CateLink">
-          {element.CateTitle}
-        </Link>
+  const LoopCategory = CategoryCardInfo.map((element, index) => (
+    <div className="CardCategory" key={index}>
+      <div className="ImageCategory">
+        <img src={element.ImageCate} id="ImageIDCategory" alt="Category" />
       </div>
-    );
-  });
+      <Link to={"/Shop"} className="CateLink">
+        {element.CateTitle}
+      </Link>
+    </div>
+  ));
 
   const ImageSliderInfo: ImageSliderInfoType[] = [
     {
       Image: "../../src/HomeImage/C1.png",
-      Title: "watch",
+      Title: "Watch",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
     {
       Image: "../../src/HomeImage/C2.png",
       Title: "Airpod",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
     {
       Image: "../../src/HomeImage/C3.png",
       Title: "XBOX",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
     {
       Image: "../../src/HomeImage/C4.png",
       Title: "Iphone",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
     {
       Image: "../../src/HomeImage/C5.png",
       Title: "Airpod",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
     {
       Image: "../../src/HomeImage/C6.png",
-      Title: "computer screen",
+      Title: "Computer Screen",
       Description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos.",
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
   ];
 
   const carouselRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
-const karCardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -117,16 +113,15 @@ const karCardsRef = useRef<HTMLDivElement>(null);
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ GSAP Animations (محسّنة)
   useEffect(() => {
-    // سلايدر يدخل بهدوء
+    // انيميشن السلايدر
     gsap.fromTo(
       ".carousel",
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
     );
 
-    // كاتيجوري تتحرك عند النزول
+    // انيميشن الكاتيجوري
     gsap.fromTo(
       ".CardCategory",
       { opacity: 0, y: 40 },
@@ -137,12 +132,12 @@ const karCardsRef = useRef<HTMLDivElement>(null);
         stagger: 0.2,
         scrollTrigger: {
           trigger: ".FlexCArdCAtegory",
-          start: "top 80%", // يشتغل لما يوصل العنصر 80% من الشاشة
+          start: "top 80%",
         },
       }
     );
 
-    // التابز
+    // انيميشن التابز
     gsap.fromTo(
       ".TabsCardContinar",
       { opacity: 0, scale: 0.9 },
@@ -157,22 +152,23 @@ const karCardsRef = useRef<HTMLDivElement>(null);
       }
     );
 
-    // الكروت KARCARDS (لازم class جواته)
+    // انيميشن KARCARDS
     gsap.fromTo(
-      ".KARCARDSClassName",
-      { opacity: 0, x: 100 },
+      ".karCard",
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
-        x: 0,
+        y: 0,
         duration: 1,
+        stagger: 0.2,
         scrollTrigger: {
-          trigger: ".KARCARDSClassName",
+          trigger: ".PRICECON",
           start: "top 85%",
         },
       }
     );
 
-    // الفوتر
+    // انيميشن الفوتر
     gsap.fromTo(
       ".FooterHom",
       { opacity: 0, y: 50 },
@@ -187,19 +183,18 @@ const karCardsRef = useRef<HTMLDivElement>(null);
       }
     );
   }, []);
+  
 
-  const LoopSliderHome = ImageSliderInfo.map((element, index) => {
-    return (
-      <div className="item" key={index}>
-        <img src={element.Image} alt={element.Title} />
-        <div className="introduce" key={index}>
-          <div className="topic">{element.Title}</div>
-          <div className="des">{element.Description}</div>
-          {element.seeMoreBtn}
-        </div>
+  const LoopSliderHome = ImageSliderInfo.map((element, index) => (
+    <div className="item" key={index}>
+      <img src={element.Image} alt={element.Title} />
+      <div className="introduce">
+        <div className="topic">{element.Title}</div>
+        <div className="des">{element.Description}</div>
+        {element.seeMoreBtn}
       </div>
-    );
-  });
+    </div>
+  ));
 
   return (
     <section className="HomeSection">
@@ -215,11 +210,11 @@ const karCardsRef = useRef<HTMLDivElement>(null);
       </div>
 
       <div className="TabsCardContinar">
-        <TABS />
+        <Tabs />
       </div>
 
       <div className="KARCARDSClassName">
-        <KARCARDS />
+        <KarCards />
       </div>
 
       <div className="FooterHom">
