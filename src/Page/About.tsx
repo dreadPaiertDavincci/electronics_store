@@ -1,7 +1,53 @@
+import { useEffect } from "react";
 import KARCARDS from "../Com/KARCARDS";
 import "../Style/About.css";
 import Footer from "./Footer";
+import gsap from "gsap";
+
 function About() {
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    // Our Story Section
+    tl.fromTo(
+      ".UpAbout:first-child .IamgeAbout",
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    )
+      .fromTo(
+        ".UpAbout:first-child .AboutParagraph",
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        "-=0.8"
+      );
+
+    // Who We Are Section
+    tl.fromTo(
+      "#AB2 .IamgeAbout",
+      { x: 100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    ).fromTo(
+      "#AB2 .AboutParagraph",
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      "-=0.8"
+    );
+
+    // KARCARDS Section
+    tl.fromTo(
+      ".AboutComponant",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+
+    // Footer
+    tl.fromTo(
+      ".FooterAbout",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
+
   return (
     <section className="AboutSection">
       <div className="UpAbout">
@@ -37,6 +83,7 @@ function About() {
           </div>
         </div>
       </div>
+
       <div id="AB2" className="UpAbout">
         <div className="AboutCo">
           <div className="IamgeAbout">
@@ -46,7 +93,7 @@ function About() {
               alt="Tahiyati"
             />
           </div>
-          <div  className="AboutParagraph">
+          <div className="AboutParagraph">
             <div className="HEDABout">
               <h2 id="ABUYT">Who We Are ?</h2>
               <p id="ParagABO">Electronics Innovators</p>
@@ -71,13 +118,15 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="AboutComponant"> 
-         <KARCARDS />
+
+      <div className="AboutComponant">
+        <KARCARDS />
       </div>
-      <div className="FooterAbout"> 
+      <div className="FooterAbout">
         <Footer />
       </div>
     </section>
   );
 }
+
 export default About;
