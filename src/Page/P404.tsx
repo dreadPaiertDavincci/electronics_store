@@ -1,14 +1,14 @@
 import "../Style/404.css";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 import Footer from "./Footer";
 function P404() {
   return <section className="P404Section">
-    <div className="ImageContinar">
-         <img src="../../src/P404.png" id="ImageNot" alt="P404" />
-    </div>
-    <div className="P404Title">
-        <h1 id="NotH1Tit">Page Not Found</h1>
-        <p id="ParaNot">The page you are looking for doesn't exist or has been moved</p>
-    </div>
+     <DotLottieReact
+      src="https://lottie.host/1a62c780-ee09-4e3f-a33d-684dfcdad9a5/w69b5X5O97.lottie"
+      loop
+      autoplay
+    />
     <Footer />
   </section>;
 }
