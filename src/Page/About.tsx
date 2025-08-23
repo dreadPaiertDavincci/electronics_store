@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import gsap from "gsap";
 
 function About() {
-  
   useEffect(() => {
     const tl = gsap.timeline();
 
@@ -14,13 +13,12 @@ function About() {
       ".UpAbout:first-child .IamgeAbout",
       { x: -100, opacity: 0 },
       { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
-    )
-      .fromTo(
-        ".UpAbout:first-child .AboutParagraph",
-        { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
-        "-=0.8"
-      );
+    ).fromTo(
+      ".UpAbout:first-child .AboutParagraph",
+      { x: 100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      "-=0.8"
+    );
 
     // Who We Are Section
     tl.fromTo(
