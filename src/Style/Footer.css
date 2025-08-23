@@ -1,7 +1,7 @@
 @import "./Them.css";
 .footerSction {
   width: 100%;
-  background-color: var(--CardColor);
+  background-color: var(--footerColor);
   height: 350px;
 }
 .FooterHom {
