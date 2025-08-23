@@ -5,6 +5,10 @@ import Box from "@mui/material/Box";
 import { HomeProduct, HomeProduct2, HomeProduct3 } from "./ProductData";
 import "../Style/TABS.css";
 import ProductCard from "./ProductCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -42,17 +46,47 @@ export default function BasicTabs() {
     setValue(newValue);
   };
 
+  React.useEffect(() => {
+    const animateCards = () => {
+      gsap.fromTo(
+        ".ProductCardAnim",
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".cardCon",
+            start: "top 85%",
+          },
+        }
+      );
+    };
+
+    animateCards();
+
+    return () => {
+      gsap.killTweensOf(".ProductCardAnim");
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [value]);
+
   return (
     <Box sx={{ width: "100%", height: "900px" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label="Game" {...a11yProps(0)} />
           <Tab label="Airpod" {...a11yProps(1)} />
           <Tab label="Keyboard" {...a11yProps(2)} />
         </Tabs>
       </Box>
 
-      {/* Game Tab */}
       <CustomTabPanel value={value} index={0}>
         <div className="VAC">
           <div className="cardCon">
@@ -63,13 +97,13 @@ export default function BasicTabs() {
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}
+                className="ProductCardAnim"
               />
             ))}
           </div>
         </div>
       </CustomTabPanel>
 
-      {/* Airpod Tab */}
       <CustomTabPanel value={value} index={1}>
         <div className="VAC">
           <div className="cardCon">
@@ -80,13 +114,13 @@ export default function BasicTabs() {
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}
+                className="ProductCardAnim"
               />
             ))}
           </div>
         </div>
       </CustomTabPanel>
 
-      {/* Keyboard Tab */}
       <CustomTabPanel value={value} index={2}>
         <div className="VAC">
           <div className="cardCon">
@@ -97,6 +131,7 @@ export default function BasicTabs() {
                 image={element.cardImage}
                 title={element.cardH3Title}
                 price={element.Price}
+                className="ProductCardAnim"
               />
             ))}
           </div>

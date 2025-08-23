@@ -6,22 +6,23 @@ type ProductCardProps = {
   image: string;
   title: string;
   price: string;
+  className?: string; 
 };
 
-const ProductCard = ({ id, image, title, price }: ProductCardProps) => {
+const ProductCard = ({ id, image, title, price, className }: ProductCardProps) => {
   return (
-  <Link to={`/product/${id}`} className="product-link">
-  <div className="product-card">
-    <img src={image} alt={title} className="product-image" />
-    <div className="product-info-wrapper">
-      <div className="product-text">
-        <h3 className="product-title">{title}</h3>
-        <p className="product-price">{price}</p>
+    <Link to={`/product/${id}`} className="product-link">
+      <div className={`product-card ${className || ""}`}>
+        <img src={image} alt={title} className="product-image" />
+        <div className="product-info-wrapper">
+          <div className="product-text">
+            <h3 className="product-title">{title}</h3>
+            <p className="product-price">{price}</p>
+          </div>
+          <div className="product-arrow">→</div>
+        </div>
       </div>
-      <div className="product-arrow">→</div> 
-    </div>
-  </div>
-</Link>
+    </Link>
   );
 };
 

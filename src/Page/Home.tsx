@@ -137,7 +137,7 @@ const karCardsRef = useRef<HTMLDivElement>(null);
         stagger: 0.2,
         scrollTrigger: {
           trigger: ".FlexCArdCAtegory",
-          start: "top 80%", // يشتغل لما يوصل العنصر 80% من الشاشة
+          start: "top 80%",
         },
       }
     );
