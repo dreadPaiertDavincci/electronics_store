@@ -2,27 +2,28 @@ import type { ReactNode } from "react";
 import "../Style/ComStyle/BlogCard.css";
 import { Link } from "react-router";
 
-type BlogDataProps = {
+type BlogCardProps = {
   BlogIamge: string;
   BlogTiitle: string;
   BlogLink: ReactNode;
+  className?: string;              // لإضافة class خارجي للأنيميشن
+  innerRef?: React.Ref<HTMLDivElement>; // ref للكرت
 };
 
-function BlogCard({ BlogIamge, BlogTiitle, BlogLink }: BlogDataProps) {
+function BlogCard({ BlogIamge, BlogTiitle, BlogLink, className, innerRef }: BlogCardProps) {
   return (
-    <div className="BC">
+    <div className={`BC ${className ? className : ""}`} ref={innerRef}>
       <div className="BCImage">
-        <img id="ImageBlogId" src={BlogIamge} alt="Tahiyaati" />
+        <img id="ImageBlogId" src={BlogIamge} alt={BlogTiitle} />
       </div>
       <div className="BlogTitleDiv">
         <p id="BLDIVPARA">{BlogTiitle}</p>
       </div>
       <div className="BlogLinkDiv">
-        <Link id="BlogLinCar" to={"#"}>
-          {BlogLink}
-        </Link>
+        {BlogLink}
       </div>
     </div>
   );
 }
+
 export default BlogCard;
