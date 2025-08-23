@@ -4,6 +4,10 @@ import { Link } from "react-router";
 import TABS from "../Com/TABS";
 import Footer from "./Footer";
 import KARCARDS from "../Com/KARCARDS";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   type ImageSliderInfoType = {
@@ -19,26 +23,11 @@ function Home() {
   };
 
   const CategoryCardInfo: CategoryType[] = [
-    {
-      ImageCate: "../../src/CategoryImage/CA1.png",
-      CateTitle: "Game",
-    },
-    {
-      ImageCate: "../../src/CategoryImage/CA2.png",
-      CateTitle: "Screen",
-    },
-    {
-      ImageCate: "../../src/CategoryImage/CA3.png",
-      CateTitle: "Phone",
-    },
-    {
-      ImageCate: "../../src/CategoryImage/CA4.png",
-      CateTitle: "Airpod",
-    },
-    {
-      ImageCate: "../../src/CategoryImage/CA5.png",
-      CateTitle: "Watch",
-    },
+    { ImageCate: "../../src/CategoryImage/CA1.png", CateTitle: "Game" },
+    { ImageCate: "../../src/CategoryImage/CA2.png", CateTitle: "Screen" },
+    { ImageCate: "../../src/CategoryImage/CA3.png", CateTitle: "Phone" },
+    { ImageCate: "../../src/CategoryImage/CA4.png", CateTitle: "Airpod" },
+    { ImageCate: "../../src/CategoryImage/CA5.png", CateTitle: "Watch" },
   ];
 
   const LoopCategory = CategoryCardInfo.map((element, index) => {
@@ -53,6 +42,7 @@ function Home() {
       </div>
     );
   });
+
   const ImageSliderInfo: ImageSliderInfoType[] = [
     {
       Image: "../../src/HomeImage/C1.png",
@@ -97,12 +87,15 @@ function Home() {
       seeMoreBtn: <button className="seeMore">SEE MORE &#8599;</button>,
     },
   ];
+
   const carouselRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const carousel = carouselRef.current;
     const listHTML = listRef.current;
     if (!carousel || !listHTML) return;
+
     const showSlider = (type: "next" | "prev") => {
       carousel.classList.remove("next", "prev");
       const items = listHTML.querySelectorAll(".item");
@@ -114,13 +107,85 @@ function Home() {
         carousel.classList.add("prev");
       }
     };
+
     const interval = setInterval(() => {
       showSlider("next");
     }, 3000);
-    return () => {
-      clearInterval(interval);
-    };
+
+    return () => clearInterval(interval);
   }, []);
+
+  // ✅ GSAP Animations (محسّنة)
+  useEffect(() => {
+    // سلايدر يدخل بهدوء
+    gsap.fromTo(
+      ".carousel",
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+    );
+
+    // كاتيجوري تتحرك عند النزول
+    gsap.fromTo(
+      ".CardCategory",
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".FlexCArdCAtegory",
+          start: "top 80%", // يشتغل لما يوصل العنصر 80% من الشاشة
+        },
+      }
+    );
+
+    // التابز
+    gsap.fromTo(
+      ".TabsCardContinar",
+      { opacity: 0, scale: 0.9 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".TabsCardContinar",
+          start: "top 85%",
+        },
+      }
+    );
+
+    // الكروت KARCARDS (لازم class جواته)
+    gsap.fromTo(
+      ".KARCARDSClassName",
+      { opacity: 0, x: 100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".KARCARDSClassName",
+          start: "top 85%",
+        },
+      }
+    );
+
+    // الفوتر
+    gsap.fromTo(
+      ".FooterHom",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".FooterHom",
+          start: "top 90%",
+        },
+      }
+    );
+  }, []);
+
   const LoopSliderHome = ImageSliderInfo.map((element, index) => {
     return (
       <div className="item" key={index}>
@@ -133,6 +198,7 @@ function Home() {
       </div>
     );
   });
+
   return (
     <section className="HomeSection">
       <div className="carousel" ref={carouselRef}>
@@ -150,7 +216,9 @@ function Home() {
         <TABS />
       </div>
 
-      <KARCARDS />
+      <div className="KARCARDSClassName">
+        <KARCARDS />
+      </div>
 
       <div className="FooterHom">
         <Footer />
@@ -158,4 +226,5 @@ function Home() {
     </section>
   );
 }
+
 export default Home;
