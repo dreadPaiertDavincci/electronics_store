@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import gsap from "gsap";
 
 function About() {
+  
   useEffect(() => {
     const tl = gsap.timeline();
 
