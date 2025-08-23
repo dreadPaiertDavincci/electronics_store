@@ -28,13 +28,13 @@ function NavBarHead() {
       </div>
       <div className="favuret_Cart_User">
         <div className="iconCon">
-          <Link to="/Favuret">
+          <Link to="/Favuret" id="HEDLİ" >
             <i id="icones" className="bx bx-heart"></i>
           </Link>
           <span className="cartSpan">{favourites.length}</span>
         </div>
         <div className="iconCon">
-          <Link to="/CartPage">
+          <Link to="/CartPage" id="HEDLİ">
             <i id="icones" className="bx bx-shopping-bag-alt"></i>
           </Link>
           <span className="cartSpan">{totalItems}</span>

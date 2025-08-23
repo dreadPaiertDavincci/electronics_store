@@ -18,6 +18,9 @@
     align-items: center;
 
 }
+#HEDLİ{ 
+  color: var(--Primary-Color);
+}
 .LogoClassName { 
  font-family: "Poetsen One", sans-serif;
   font-weight: 400;
